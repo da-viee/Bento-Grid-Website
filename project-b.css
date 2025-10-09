@@ -1,0 +1,76 @@
+/* =================================== */
+/*    PROJECT B - BENTO GRID STYLES    */
+/* =================================== */
+.project-b-page .project-grid-container {
+    max-width: 1600px;
+    margin: 40px auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3-column layout */
+    gap: 20px;
+}
+
+.project-b-page .bento-card {
+    background-color: #2D2D30;
+    border-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+/* Card placement for asymmetrical layout */
+.project-b-page .title-card {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3; /* Tall card */
+    display: flex;
+    flex-direction: column;
+}
+.project-b-page .title-card h1 { font-size: 40px; margin: 0 0 10px 0; }
+.project-b-page .title-card h2 { font-size: 18px; font-weight: 500; opacity: 0.7; margin-bottom: 30px; }
+.project-b-page .title-card p { opacity: 0.8; line-height: 1.6; margin-top: auto; }
+
+.project-b-page .hero-card {
+    grid-column: 2 / 4; /* Wide card */
+    padding: 0;
+    overflow: hidden;
+}
+.project-b-page .image-card { grid-column: 2 / 3; }
+.project-b-page .testimonial-card { grid-column: 3 / 4; }
+
+.project-b-page .image-card h4 { margin: 0 0 15px 0; font-weight: 500; }
+.project-b-page .image-card img { width: 100%; border-radius: 10px; }
+.project-b-page .testimonial-card blockquote { font-size: 20px; }
+.project-b-page .testimonial-card cite { display: block; margin-top: 15px; font-style: normal; opacity: 0.7; }
+.project-b-page .video-player img { display: block; width: 100%; height: 100%; object-fit: cover;}
+
+/* Navigation */
+.project-b-page footer { padding: 20px; }
+.project-b-page .project-nav { display: flex; justify-content: space-between; border-top: 1px solid #444; padding-top: 40px; margin-top: 20px; }
+.project-b-page .nav-link { text-decoration: none; color: #fff; }
+.project-b-page .nav-link span { display: block; opacity: 0.7; font-size: 14px; }
+.project-b-page .nav-link h4 { margin: 5px 0 0 0; font-size: 20px; }
+.project-b-page .nav-link.next { text-align: right; }
+
+/* --- THIS IS THE RESPONSIVE PART --- */
+@media (max-width: 1024px) { /* Tablet */
+    .project-b-page .project-grid-container {
+        grid-template-columns: 1fr 1fr; /* Switch to 2 columns */
+    }
+    .project-b-page .title-card { grid-column: 1 / 3; grid-row: auto; } /* Title becomes a wide card */
+    .project-b-page .hero-card { grid-column: 1 / 3; }
+    .project-b-page .image-card { grid-column: 1 / 2; }
+    .project-b-page .testimonial-card { grid-column: 2 / 3; }
+}
+@media (max-width: 768px) { /* Mobile */
+    .project-b-page .project-grid-container {
+        grid-template-columns: 1fr; /* Stack everything into 1 column */
+    }
+    /* Reset all spans for single column */
+    .project-b-page .title-card,
+    .project-b-page .hero-card,
+    .project-b-page .image-card,
+    .project-b-page .testimonial-card {
+        grid-column: auto;
+        grid-row: auto;
+    }
+    .project-b-page .title-card h1 { font-size: 36px; }
+}

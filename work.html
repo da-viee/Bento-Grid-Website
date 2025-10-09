@@ -22,7 +22,14 @@
             <a href="work.html" class="active">Our Work</a> <!-- Set this link as active -->
             <a href="contact.html">Contact Us</a>
         </nav>
-        <button class="download-btn">Start a Project</button>
+        <div class="navbar-actions">
+            <button class="download-btn">Start a Project</button>
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </header>
 
     <div class="portfolio-container">
@@ -34,34 +41,44 @@
 
         <!-- Filter Bar -->
         <nav class="filter-bar">
-            <button class="filter-btn active">All</button>
-            <button class="filter-btn">3D Renders</button>
-            <button class="filter-btn">Motion Graphics</button>
-            <button class="filter-btn">Social Ads</button>
+            <button class="filter-btn active" onclick="showPopup('Recent projects filter is currently not available')">Recent</button>
+            <button class="filter-btn" onclick="showPopup('3D Renders filter is currently not available')">3D Renders</button>
+            <button class="filter-btn" onclick="showPopup('Motion Graphics filter is currently not available')">Motion Graphics</button>
+            <button class="filter-btn" onclick="showPopup('Social Ads filter is currently not available')">Social Ads</button>
         </nav>
 
         <!-- Dynamic Project Grid (REVISED) -->
         <main class="project-grid">
             <!-- Each project is now specifically placed using an ID -->
-            <a href="#" class="project-card" id="project-a">
+            <a href="project-a.html" class="project-card" id="project-a">
                 <div class="project-content"><span>Project A</span></div>
             </a>
-            <a href="#" class="project-card" id="project-b">
+            <a href="project-b.html" class="project-card" id="project-b">
                 <div class="project-content"><span>Project B</span></div>
             </a>
-            <a href="#" class="project-card" id="project-c">
+            <a href="project-c.html" class="project-card" id="project-c">
                 <div class="project-content"><span>Project C</span></div>
             </a>
-            <a href="#" class="project-card" id="project-d">
+            <a href="project-d.html" class="project-card" id="project-d">
                 <div class="project-content"><span>Project D</span></div>
             </a>
-            <a href="#" class="project-card" id="project-e">
+            <a href="project-e.html" class="project-card" id="project-e">
                 <div class="project-content"><span>Project E</span></div>
             </a>
-            <a href="#" class="project-card" id="project-f">
+            <a href="project-f.html" class="project-card" id="project-f">
                 <div class="project-content"><span>Project F</span></div>
             </a>
         </main>
+    </div>
+
+    <!-- Popup for filter error messages -->
+    <div id="filter-popup" class="popup-overlay">
+        <div class="popup-content">
+            <span class="popup-close">&times;</span>
+            <h2>Storage Crashed</h2>
+            <p id="popup-message">Project currently not available.</p>
+            <p>Error 404: The requested filter is currently not available. Please try again later.</p>
+        </div>
     </div>
 
     <!-- Call to Action Footer -->
@@ -70,6 +87,6 @@
         <p>Let's create something amazing for your brand.</p>
         <a href="contact.html" class="cta-button">Start a Project</a>
     </section>
-
+    <script src="script.js"></script>
 </body>
 </html>

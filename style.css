@@ -43,6 +43,32 @@ body, html {
     border-radius: 5px;
 }
 
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
 .nav-links a {
     color: #aaa;
     text-decoration: none;
@@ -52,6 +78,10 @@ body, html {
 }
 
 .nav-links a:hover {
+    color: #fff;
+}
+
+.nav-links a.active {
     color: #fff;
 }
 
@@ -249,17 +279,36 @@ body, html {
         flex-wrap: wrap;
         justify-content: space-between;
     }
-
-    .nav-links {
-        display: none; /* Hide nav links for a future hamburger menu */
+    
+    .hamburger-menu {
+        display: flex;
     }
-
+    
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        background-color: #2D2D30;
+        border-radius: 10px;
+        margin-top: 10px;
+        padding: 10px 0;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .nav-links a {
+        margin: 5px 20px;
+        padding: 10px 0;
+    }
+    
     .logo {
         font-size: 20px;
     }
 
     .download-btn {
-        padding: 10px 20px;
+        padding: 8px 16px;
         font-size: 14px;
     }
     
@@ -274,11 +323,6 @@ body, html {
 
     .join-us-btn {
         font-size: 14px;
-        padding: 12px 20px;
-    }
-
-    .stat-number {
-        font-size: 24px;
     }
 }
 /* =================================== */

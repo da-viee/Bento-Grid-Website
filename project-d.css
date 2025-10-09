@@ -1,0 +1,62 @@
+/* =================================== */
+/*    PROJECT D - BENTO GRID STYLES    */
+/* =================================== */
+.project-d-page .project-grid-container {
+    max-width: 1600px;
+    margin: 40px auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3-column layout */
+    gap: 20px;
+}
+
+.project-d-page .bento-card {
+    background-color: #2D2D30;
+    border-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+/* Card placement */
+.project-d-page .hero-card {
+    grid-column: 1 / 3; /* Span 2 columns */
+    grid-row: 1 / 3; /* Span 2 rows */
+    padding: 0;
+    overflow: hidden;
+}
+.project-d-page .brief-card {
+    grid-column: 3 / 4; /* 3rd column */
+    grid-row: 1 / 3; /* Span 2 rows */
+}
+/* The two image cards will naturally fall into the next available row */
+.project-d-page .image-card-1 { grid-column: 1 / 2; }
+.project-d-page .image-card-2 { grid-column: 2 / 3; }
+
+.project-d-page .brief-card { display: flex; flex-direction: column; }
+.project-d-page .brief-card h3 { margin-top: 0; }
+.project-d-page .brief-card p { opacity: 0.8; line-height: 1.6; margin-top: auto; }
+.project-d-page .image-card h4 { margin: 0 0 15px 0; font-weight: 500; }
+.project-d-page .image-card img { width: 100%; border-radius: 10px; }
+.project-d-page .video-player img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+/* Navigation */
+.project-d-page footer { padding: 20px; }
+.project-d-page .project-nav { display: flex; justify-content: space-between; border-top: 1px solid #444; padding-top: 40px; margin-top: 20px; }
+.project-d-page .nav-link { text-decoration: none; color: #fff; }
+.project-d-page .nav-link span { display: block; opacity: 0.7; font-size: 14px; }
+.project-d-page .nav-link h4 { margin: 5px 0 0 0; font-size: 20px; }
+.project-d-page .nav-link.next { text-align: right; }
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 1024px) { /* Tablet */
+    .project-d-page .project-grid-container {
+        grid-template-columns: 1fr 1fr; /* Switch to 2 columns */
+    }
+    .project-d-page .hero-card { grid-column: 1 / 3; grid-row: auto; } /* Hero becomes full width */
+    .project-d-page .brief-card { grid-column: 1 / 3; grid-row: auto; }
+}
+@media (max-width: 768px) { /* Mobile */
+    .project-d-page .project-grid-container {
+        grid-template-columns: 1fr; /* Stack everything */
+    }
+}

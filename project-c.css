@@ -1,0 +1,67 @@
+/* =================================== */
+/*    PROJECT C - BENTO GRID STYLES    */
+/* =================================== */
+.project-c-page .project-grid-container {
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3-column layout */
+    gap: 20px;
+}
+
+.project-c-page .bento-card {
+    background-color: #2D2D30;
+    border-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+/* Card placement */
+.project-c-page .title-card {
+    grid-column: 1 / 2;
+    background-color: transparent; /* No background for title */
+    padding: 0;
+}
+.project-c-page .hero-card {
+    grid-column: 2 / 4; /* Wide card */
+    padding: 0;
+    overflow: hidden;
+}
+.project-c-page .text-card {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+/* The three image cards will naturally fall into the next available slots */
+
+.project-c-page .title-card h1 { font-size: 48px; margin: 0; }
+.project-c-page .title-card h2 { font-size: 18px; font-weight: 500; opacity: 0.7; }
+.project-c-page .text-card h3 { margin-top: 0; }
+.project-c-page .text-card p { opacity: 0.8; line-height: 1.6; }
+.project-c-page .image-card h4 { margin: 0 0 15px 0; font-weight: 500; }
+.project-c-page .image-card img { width: 100%; border-radius: 10px; }
+.project-c-page .video-player img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+/* Navigation */
+.project-c-page footer { padding: 20px; }
+.project-c-page .project-nav { display: flex; justify-content: space-between; border-top: 1px solid #444; padding-top: 40px; margin-top: 20px; }
+.project-c-page .nav-link { text-decoration: none; color: #fff; }
+.project-c-page .nav-link span { display: block; opacity: 0.7; font-size: 14px; }
+.project-c-page .nav-link h4 { margin: 5px 0 0 0; font-size: 20px; }
+.project-c-page .nav-link.next { text-align: right; }
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 1024px) { /* Tablet */
+    .project-c-page .project-grid-container {
+        grid-template-columns: 1fr 1fr; /* Switch to 2 columns */
+    }
+    .project-c-page .title-card { grid-column: 1 / 3; } /* Title becomes full width */
+    .project-c-page .hero-card { grid-column: 1 / 3; }
+    .project-c-page .text-card { grid-column: 1 / 3; grid-row: auto; }
+}
+@media (max-width: 768px) { /* Mobile */
+    .project-c-page .project-grid-container {
+        grid-template-columns: 1fr; /* Stack everything */
+    }
+    .project-c-page .title-card h1 { font-size: 36px; }
+}

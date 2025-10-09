@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Work - Your Animation Studio</title>
+    <link rel="stylesheet" href="style.css"> <!-- Your main stylesheet -->
+    <link rel="stylesheet" href="work.css">   <!-- The new stylesheet for this page -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- You can reuse the main navbar from your homepage here -->
+    <header class="navbar main-container">
+        <div class="logo">
+            <img src="https://placehold.co/30x30/000000/FFFFFF?text=LOGO" alt="Logo">
+            <span>RUNCO</span> <!-- Or your company name -->
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="work.html" class="active">Our Work</a> <!-- Set this link as active -->
+            <a href="contact.html">Contact Us</a>
+        </nav>
+        <button class="download-btn">Start a Project</button>
+    </header>
+
+    <div class="portfolio-container">
+        <!-- Page Header -->
+        <div class="portfolio-header">
+            <h1>Our Work</h1>
+            <p>A collection of our favorite product animations and motion graphics.</p>
+        </div>
+
+        <!-- Filter Bar -->
+        <nav class="filter-bar">
+            <button class="filter-btn active">All</button>
+            <button class="filter-btn">3D Renders</button>
+            <button class="filter-btn">Motion Graphics</button>
+            <button class="filter-btn">Social Ads</button>
+        </nav>
+
+        <!-- Dynamic Project Grid (REVISED) -->
+        <main class="project-grid">
+            <!-- Each project is now specifically placed using an ID -->
+            <a href="#" class="project-card" id="project-a">
+                <div class="project-content"><span>Project A</span></div>
+            </a>
+            <a href="#" class="project-card" id="project-b">
+                <div class="project-content"><span>Project B</span></div>
+            </a>
+            <a href="#" class="project-card" id="project-c">
+                <div class="project-content"><span>Project C</span></div>
+            </a>
+            <a href="#" class="project-card" id="project-d">
+                <div class="project-content"><span>Project D</span></div>
+            </a>
+            <a href="#" class="project-card" id="project-e">
+                <div class="project-content"><span>Project E</span></div>
+            </a>
+            <a href="#" class="project-card" id="project-f">
+                <div class="project-content"><span>Project F</span></div>
+            </a>
+        </main>
+    </div>
+
+    <!-- Call to Action Footer -->
+    <section class="cta-footer">
+        <h2>Like what you see?</h2>
+        <p>Let's create something amazing for your brand.</p>
+        <a href="contact.html" class="cta-button">Start a Project</a>
+    </section>
+
+</body>
+</html>

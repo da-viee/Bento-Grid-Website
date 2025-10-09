@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF--8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Your Animation Studio</title>
+    <link rel="stylesheet" href="style.css">   <!-- Your main stylesheet -->
+    <link rel="stylesheet" href="contact.css"> <!-- The new stylesheet for this page -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Re-use the main navbar for consistency -->
+    <header class="navbar main-container">
+        <div class="logo">
+            <img src="https://placehold.co/30x30/000000/FFFFFF?text=LOGO" alt="Logo">
+            <span>RUNCO</span> <!-- Or your company name -->
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="work.html">Our Work</a>
+            <a href="contact.html" class="active">Contact Us</a> <!-- Set this link as active -->
+        </nav>
+        <button class="download-btn">Start a Project</button>
+    </header>
+
+    <div class="contact-page-container">
+        <!-- Page Header -->
+        <div class="contact-header">
+            <h1>Let's Create Together</h1>
+            <p>Have a project in mind or just want to say hi? We'd love to hear from you.</p>
+        </div>
+
+        <!-- Contact Bento Grid -->
+        <main class="contact-grid">
+            <!-- Main Form Card (Large) -->
+            <div class="contact-card form-card">
+                <h2>Send us a Message</h2>
+                <form action="#">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Company (Optional)</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Tell us about your project</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+
+            <!-- Book a Call Card -->
+            <div class="contact-card call-card">
+                <h3>Book a Free Discovery Call</h3>
+                <p>Want to discuss your project live? Pick a time on our calendar that works for you.</p>
+                <a href="#" class="call-to-action-btn">Schedule a 15-Min Call →</a>
+            </div>
+
+            <!-- FAQ Card -->
+            <div class="contact-card faq-card">
+                <h3>Frequently Asked Questions</h3>
+                <ul>
+                    <li>What is your typical pricing?</li>
+                    <li>What is the average project turnaround time?</li>
+                    <li>What do you need from me to get started?</li>
+                </ul>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

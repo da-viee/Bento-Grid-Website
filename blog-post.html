@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{SEO_TITLE}}</title>
+    <meta name="description" content="{{SEO_DESC}}">
+    <meta property="og:title" content="{{SEO_TITLE}}">
+    <meta property="og:description" content="{{SEO_DESC}}">
+    <meta property="og:image" content="{{SEO_IMAGE}}">
+    
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/blog-post.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+        <!-- HEADER -->
+        <header class="navbar main-container">
+            <div class="logo">
+                <span>dotted pixels</span>
+            </div>
+            <nav class="nav-links">
+                <a href="/index.html">Home</a>
+                <a href="/work.html">Our Work</a>
+                <a href="/blog.html">Blog</a>
+                <a href="/contact.html">Contact Us</a>
+            </nav>
+            <div class="navbar-actions">
+                <button class="download-btn">Start a Project</button>
+            </div>
+        </header>
+
+        <article class="single-blog-post">
+            <header class="post-header">
+                <h1 class="post-title">{{BLOG_TITLE}}</h1>
+                <p class="post-date">{{BLOG_DATE}}</p>
+            </header>
+            
+            <div class="post-content">
+                {{BLOG_CONTENT}}
+            </div>
+            
+            <div class="post-footer">
+                <a href="/blog.html" class="back-link">← Back to all posts</a>
+            </div>
+        </article>
+    </div>
+</body>
+</html>

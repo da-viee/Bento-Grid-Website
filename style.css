@@ -1,819 +1,109 @@
-/* General Body and Resets */
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    min-height: 100vh;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-    background-color: #212124; /* Dark background for the page */
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+
+body {
+    background-color: #ffffff; /* High contrast white base */
+    color: #000000;
 }
 
-/* Main container for the entire layout */
 .main-container {
-    width: 100%;
-    max-width: 1600px; /* Max width to prevent stretching on very large screens */
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 20px;
-    box-sizing: border-box;
-    background-color: #2D2D30; /* Main container background */
-    border-radius: 20px;
-    border: 1px solid #444;
+    padding: 0 2rem;
 }
 
-/* Header/Navbar Styling */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
-    padding: 10px;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    font-weight: 800;
-    font-size: 24px;
-    color: #fff;
-}
-
-.logo img {
-    margin-right: 12px;
-    border-radius: 5px;
-}
-
-.navbar-actions {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.hamburger-menu {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    padding: 5px;
-}
-
-.hamburger-menu span {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    margin: 3px 0;
-    transition: 0.3s;
-}
-
-.nav-links {
-    display: flex;
-    align-items: center;
+    padding: 2rem 0;
 }
 
 .nav-links a {
-    color: #aaa;
+    margin: 0 1rem;
     text-decoration: none;
-    margin: 0 24px;
-    font-size: 16px;
+    color: #666;
     font-weight: 500;
 }
-
-.nav-links a:hover {
-    color: #fff;
-}
-
-.nav-links a.active {
-    color: #fff;
-}
+.nav-links a.active { color: #000; font-weight: 700; }
 
 .download-btn {
-    background-color: #111;
+    background: #000;
     color: #fff;
-    border: 1px solid #444;
-    border-radius: 25px;
-    padding: 12px 24px;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
     cursor: pointer;
-    font-weight: 500;
-    font-size: 16px;
-    white-space: nowrap; /* Prevents button text from wrapping */
 }
 
-/* Bento Grid Layout */
-.bento-grid {
+/* --- DYNAMIC BENTO GRID --- */
+.dynamic-bento-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: minmax(100px, auto);
-    gap: 20px;
-}
-
-.bento-item {
-    border-radius: 20px;
-    padding: 25px;
-    box-sizing: border-box;
-    color: #fff;
-}
-
-/* Hero Section (Top Large Box) */
-.hero {
-    grid-column: 1 / 4;
-    background-color: #E0E0E0;
-    position: relative;
-    padding: 0; /* Remove padding to let image fill */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 300px;
-}
-
-.hero-content {
-    width: 100%;
-    height: 100%;
-}
-
-.hero-content img,
-.hero-content video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 20px;
-}
-
-.join-us-btn {
-    position: absolute;
-    bottom: 25px;
-    right: 25px;
-    background-color: #D4FF00;
-    color: #000;
-    border: 2px solid #000;
-    border-radius: 15px;
-    padding: 15px 25px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    transition: transform 0.2s ease;
-}
-
-.join-us-btn:hover {
-    transform: scale(1.05);
-}
-
-.join-us-btn .arrow {
-    margin-left: 10px;
-    font-size: 20px;
-}
-
-/* Smaller Bento Boxes */
-.running-skills {
-    background-color: #424242;
-}
-
-.running-skills h3 {
-    margin-top: 0;
-    font-weight: 700;
-}
-
-.activities {
-    background-color: #FFFFFF;
-    color: #000;
-}
-
-.activities h4 {
-    color: #888;
-    margin: 0;
-    font-weight: 500;
-}
-
-.activities h3 {
-    margin: 5px 0 15px 0;
-    font-weight: 700;
-}
-
-.placeholder-box img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-/* Download App Section */
-.download-app {
-    background-color: #7E7EFF;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    grid-template-rows: auto 1fr;
-    gap: 15px 20px;
-    align-items: center;
-}
-
-.qr-code img {
-    border-radius: 10px;
-}
-
-.app-info h4 {
-    margin: 0 0 5px 0;
-    font-weight: 700;
-}
-
-.app-info p {
-    font-size: 14px;
-    margin: 0;
-    opacity: 0.9;
-    line-height: 1.4;
-}
-
-.stats {
-    grid-column: 1 / 3;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 15px;
-}
-
-.stat-item {
-    text-align: center;
-}
-
-.stat-number {
-    font-size: 28px;
-    font-weight: 800;
-    display: block;
-}
-
-.stat-label {
-    font-size: 12px;
-    opacity: 0.9;
-    text-transform: uppercase;
-}
-
-.avatars {
-    border-radius: 15px;
-}
-
-/* =================================== */
-/*           RESPONSIVE DESIGN         */
-/* =================================== */
-
-/* Tablet View */
-@media (max-width: 1024px) {
-    .main-container {
-        padding: 15px;
-        border-radius: 0;
-        border: none;
-    }
-
-    .nav-links a {
-        margin: 0 15px;
-    }
-
-    .bento-grid {
-        grid-template-columns: 1fr 1fr; /* Switch to 2 columns */
-    }
-
-    .download-app {
-        grid-column: 1 / 3; /* Make this item span the full width */
-    }
-}
-
-/* Mobile View */
-@media (max-width: 768px) {
-    .navbar {
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-    
-    .hamburger-menu {
-        display: flex;
-    }
-    
-    .nav-links {
-        display: none;
-        width: 100%;
-        flex-direction: column;
-        background-color: #2D2D30;
-        border-radius: 10px;
-        margin-top: 10px;
-        padding: 10px 0;
-    }
-    
-    .nav-links.active {
-        display: flex;
-    }
-    
-    .nav-links a {
-        margin: 5px 20px;
-        padding: 10px 0;
-    }
-    
-    .logo {
-        font-size: 20px;
-    }
-
-    .download-btn {
-        padding: 8px 16px;
-        font-size: 14px;
-    }
-    
-    .bento-grid {
-        grid-template-columns: 1fr; /* Stack everything in 1 column */
-    }
-
-    /* Reset all items to span 1 column */
-    .hero, .running-skills, .activities, .download-app {
-        grid-column: 1 / 2;
-    }
-
-    .join-us-btn {
-        font-size: 14px;
-    }
-}
-/* =================================== */
-/*        SECTION 2 (REVISED)          */
-/* =================================== */
-
-.bento-grid-2 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto auto auto; /* Defining 3 distinct rows */
-    gap: 20px;
-    margin-top: 40px;
-}
-
-.bento-item-s2 {
-    border-radius: 20px;
-    padding: 25px;
-    box-sizing: border-box;
-    background-color: #F4F0E9; /* Default light background */
-    color: #333;
-    display: flex;
-    flex-direction: column;
-}
-
-/* --- Explicit Grid Item Placement --- */
-.item-outsourcing {
-    grid-column: 1 / 2;
-    grid-row: 1 / 3; /* Spans first 2 rows */
-    justify-content: space-between;
-    display: flex;
-    flex-direction: column;
-    background-image: url('assets/images/syy0001.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-}
-.outsourcing-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-}
-.item-casestudy {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
-    justify-content: space-between;
-}
-.item-we-handle {
-    grid-column: 3 / 4;
-    grid-row: 1 / 2;
-    justify-content: space-between;
-}
-.item-stats {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-    background-color: #1E1E2C;
-    color: #fff;
-    gap: 20px;
-    justify-content: center;
-}
-.item-phone-app {
-    grid-column: 3 / 4;
-    grid-row: 2 / 4; /* Spans 2nd and 3rd row */
-    background-color: #D6E9FF;
-    padding: 0;
-    overflow: hidden;
-    align-items: center;
-    justify-content: center;
-}
-.item-metrics {
-    grid-column: 1 / 3; /* Spans first 2 columns */
-    grid-row: 3 / 4;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    gap: 15px;
-}
-/* --- End of Grid Placement --- */
-
-.outsourcing-header {
-    text-align: center;
-    font-weight: 500;
-    opacity: 0.7;
-}
-.agent-photo {
-    width: 100%;
-    flex-grow: 1;
-    object-fit: cover;
-    border-radius: 20px;
-    margin: 0;
-}
-.social-proof {
-    text-align: center;
-}
-.social-proof span {
-    font-size: 24px;
-    font-weight: 700;
-}
-.social-proof img {
-    margin-top: 10px;
-    vertical-align: middle;
-}
-
-.casestudy-header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-.c-logo {
-    font-weight: 800;
-    font-size: 20px;
-}
-.stars {
-    color: #FFC107;
-}
-.reviews {
-    font-size: 14px;
-    opacity: 0.7;
-}
-.item-casestudy img {
-    width: 100%;
-    margin-top: 20px;
-}
-
-.we-handle-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-.we-handle-header span {
-    font-size: 12px;
-    font-weight: 500;
-    opacity: 0.7;
-}
-.item-we-handle h2 {
-    font-size: 32px;
-    font-weight: 700;
-    margin: 0;
-    line-height: 1.2;
-}
-.wavy-underline {
-    text-decoration: underline;
-    text-decoration-style: wavy;
-    text-decoration-color: #A1A1FF;
-    text-underline-offset: 8px;
-}
-
-.stat-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 15px;
-    border-radius: 15px;
-}
-.stat-row img {
-    border-radius: 50%;
-}
-.stat-text h3 {
-    margin: 0;
-    font-size: 24px;
-}
-.stat-text p {
-    margin: 5px 0 0;
-    font-size: 12px;
-    opacity: 0.7;
-}
-
-.item-phone-app img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.metric-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-.metric-item img {
-    display: block;
-    margin-bottom: 10px;
-}
-.metric-item img.circle {
-    border-radius: 50%;
-}
-.metric-data span {
-    font-size: 12px;
-    opacity: 0.7;
-}
-.metric-data p {
-    font-size: 32px;
-    font-weight: 700;
-    margin: 5px 0 0;
-    color: #E6A400;
-}
-
-/* =================================== */
-/*   SECTION 2 (REVISED) RESPONSIVE    */
-/* =================================== */
-
-@media (max-width: 1024px) {
-    .bento-grid-2 {
-        grid-template-columns: 1fr 1fr; /* 2 columns for tablet */
-        grid-template-rows: auto; /* Let rows be automatic */
-    }
-
-    /* Re-assign grid positions for 2 columns */
-    .item-outsourcing { grid-column: 1 / 2; grid-row: 1 / 3; }
-    .item-casestudy { grid-column: 2 / 3; grid-row: 1 / 2; }
-    .item-we-handle { grid-column: 2 / 3; grid-row: 2 / 3; }
-    .item-stats { grid-column: 1 / 2; grid-row: 3 / 4; }
-    .item-phone-app { grid-column: 2 / 3; grid-row: 3 / 5; }
-    .item-metrics { grid-column: 1 / 3; grid-row: 5 / 6; }
-}
-
-@media (max-width: 768px) {
-    .bento-grid-2 {
-        grid-template-columns: 1fr; /* 1 column for mobile */
-    }
-
-    /* Reset all grid positions for single column stacking */
-    .item-outsourcing, .item-casestudy, .item-we-handle,
-    .item-stats, .item-phone-app, .item-metrics {
-        grid-column: auto;
-        grid-row: auto;
-    }
-
-    .item-metrics {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .item-we-handle h2 { font-size: 28px; }
-}
-/* =================================== */
-/*             SECTION 4               */
-/* =================================== */
-
-.bento-grid-4 {
-    display: grid;
-    grid-template-columns: 1.2fr 1fr; /* Left column is wider */
-    grid-template-rows: 1fr 1fr;
-    gap: 20px;
-    margin-top: 40px;
-    background-color: #F0F0F0;
-    padding: 20px;
-    border-radius: 20px;
-    /* Subtle dot pattern background */
-    background-image: radial-gradient(#cccccc 1px, transparent 1px);
-    background-size: 16px 16px;
-}
-
-.bento-item-s4 {
-    border-radius: 20px;
-    padding: 25px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Tall Left Item: Offers */
-.item-offers {
-    grid-row: 1 / 3; /* Span two rows */
-    background-image: url('assets/images/4-300x300.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #fff;
-    justify-content: space-between;
-    position: relative;
-    overflow: hidden;
-}
-.item-offers h4 {
-    margin: 0;
-    font-weight: 500;
-    opacity: 0.7;
-}
-.item-offers h2 {
-    font-size: 40px;
-    margin: 10px 0 0 0;
-    line-height: 1.2;
-}
-.offer-product-image {
-    position: absolute;
-    right: -20px;
-    bottom: 60px;
-    width: 200px;
-}
-.all-products-btn {
-    background-color: #fff;
-    color: #000;
-    border-radius: 15px;
-    padding: 10px;
-    text-decoration: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: auto; /* Pushes to the bottom */
-    z-index: 1; /* Stay above the image */
-}
-.btn-text span {
-    font-size: 12px;
-    opacity: 0.7;
-}
-.btn-text p {
-    margin: 0;
-    font-weight: 700;
-}
-.cart-icon {
-    background-color: #F0F0F0;
-    border-radius: 10px;
-    padding: 10px 15px;
-    font-size: 20px;
-}
-
-/* Top Right Item: Blog */
-.item-blog {
-    background-color: #E6E6E6;
-    color: #333;
-    justify-content: space-between;
-}
-.card-header {
-    display: flex;
-    justify-content: space-between;
-    font-size: 12px;
-    font-weight: 500;
-    opacity: 0.7;
-}
-.arrow-icon, .send-icon {
-    font-size: 18px;
-}
-.item-blog h3 {
-    font-size: 28px;
-    margin: 20px 0;
-}
-.blog-image {
-    width: 100%;
-    align-self: flex-end;
-    margin-top: auto;
-}
-
-/* Bottom Right Container */
-.item-bottom-right-container {
-    padding: 0;
-    background-color: transparent;
-    flex-direction: row;
-    gap: 20px;
-}
-.sub-item {
-    flex: 1; /* Each sub-item takes half the space */
-    border-radius: 20px;
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.sub-item h3 {
-    font-size: 28px;
-    margin: 0;
-    margin-top: auto; /* Push to bottom */
-}
-
-/* About Us Card */
-.item-about-s4 {
-    background-color: #C5A1FF;
-    color: #fff;
-}
-
-/* Contact Us Card */
-.item-contact-s4 {
-    background-image: url('assets/images/3-300x300.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #333;
-}
-
-
-/* =================================== */
-/*        SECTION 4 RESPONSIVE         */
-/* =================================== */
-
-@media (max-width: 1024px) {
-    .bento-grid-4 {
-        grid-template-columns: 1fr; /* Stack into a single column */
-    }
-    .item-offers {
-        grid-row: auto; /* Reset row span */
-    }
-    .item-bottom-right-container {
-        flex-direction: column; /* Stack sub-items vertically on tablet */
-    }
-    .sub-item {
-        width: 100%;
-    }
-    .item-offers h2 { font-size: 32px; }
-}
-
-@media (max-width: 768px) {
-    .item-bottom-right-container {
-        flex-direction: row; /* Go back to side-by-side on mobile for better use of space */
-    }
-}
-/* =================================== */
-/*             SECTION 5               */
-/* =================================== */
-
-.bento-grid-5 {
-    display: grid;
+    /* Create a dense 4-column layout */
     grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: minmax(100px, auto);
-    gap: 20px;
-    margin-top: 40px;
+    /* Auto rows give us consistent height blocks to span across */
+    grid-auto-rows: 250px; 
+    gap: 1.5rem;
+    padding: 2rem 0 5rem 0;
 }
 
-.bento-item-s5 {
-    border-radius: 20px;
-    background-color: #F5F3ED; /* A default off-white background */
-    padding: 20px;
-    box-sizing: border-box;
-    overflow: hidden;
+/* Individual Card */
+.bento-card {
+    position: relative;
+    border-radius: 16px;
+    padding: 2rem;
+    overflow: visible; /* CRITICAL: allows 3D images to overlap out of the card */
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid #e5e5e5;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.bento-item-s5 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-top: auto; /* Pushes image to bottom if there's text */
+.bento-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
 }
 
-.bento-item-s5 h3 {
-    margin: 0 0 10px 0;
-}
-.bento-item-s5 h4 {
-    margin: 0 0 15px 0;
-    font-weight: 500;
-}
-.bento-item-s5 p {
-    margin: 0;
-    font-size: 14px;
-    opacity: 0.8;
+.bento-card h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    z-index: 10; /* Keep text above images */
+    position: relative;
 }
 
-/* --- Grid Item Placement --- */
-.item-motion { grid-column: 2 / 4; }
-.item-tap-draw { grid-row: 2 / 4; }
-.item-linearity { grid-column: 2 / 4; }
-.item-posters { grid-column: 4 / 5; grid-row: 3 / 4; }
+/* Media handling */
+.bento-card .card-media {
+    position: absolute;
+    /* By default, we might just center it, but JS will apply left/top offsets */
+    /* Z-index is higher so it can pop out */
+    z-index: 5;
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+    pointer-events: none; /* So dragging/clicking the card isn't blocked by the image */
+}
 
+/* Grid Span Utilities */
+.span-col-1 { grid-column: span 1; }
+.span-col-2 { grid-column: span 2; }
+.span-col-3 { grid-column: span 3; }
+.span-col-4 { grid-column: span 4; }
 
-/* Specific background colors from inspo */
-.item-motion, .item-ideas { background-color: #FFB366; }
-.item-linearity { background-color: #FF8C33; display: flex; align-items: center; justify-content: center; }
-.item-tap-draw { background-color: #FFF8B3; }
-.item-app-icons { background-color: #FDD5F7; }
-.item-beanie { background-color: #00CC99; }
-.item-posters, .item-designer, .item-iconography, .item-abstract-art { background-color: #F5F3ED; }
+.span-row-1 { grid-row: span 1; }
+.span-row-2 { grid-row: span 2; }
+.span-row-3 { grid-row: span 3; }
+.span-row-4 { grid-row: span 4; }
 
-
-/* =================================== */
-/*        SECTION 5 RESPONSIVE         */
-/* =================================== */
-
+/* Responsive Grid */
 @media (max-width: 1024px) {
-    .bento-grid-5 {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablet */
-    }
-
-    /* Reset grid positions for 2-column layout */
-    .item-motion, .item-tap-draw, .item-linearity, .item-posters {
-        grid-column: auto;
-        grid-row: auto;
-    }
-    
-    /* Make some items span full width to create rhythm */
-    .item-motion { grid-column: 1 / 3; }
-    .item-linearity { grid-column: 1 / 3; }
+    .dynamic-bento-grid { grid-template-columns: repeat(2, 1fr); }
+    .span-col-3, .span-col-4 { grid-column: span 2; }
 }
 
 @media (max-width: 768px) {
-    .bento-grid-5 {
-        grid-template-columns: 1fr; /* 1 column for mobile */
-    }
-    
-    /* Reset all spans for single column stacking */
-    .item-motion, .item-linearity {
-        grid-column: auto;
-    }
+    .dynamic-bento-grid { grid-template-columns: 1fr; }
+    .span-col-1, .span-col-2, .span-col-3, .span-col-4 { grid-column: span 1; }
 }

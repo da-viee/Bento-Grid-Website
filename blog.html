@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Product Animation Studio</title>
+    <title>Blog - dotted pixels</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="blog.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
@@ -17,9 +18,9 @@
                 <span>dotted pixels</span>
             </div>
             <nav class="nav-links">
-                <a href="index.html" class="active">Home</a>
+                <a href="index.html">Home</a>
                 <a href="work.html">Our Work</a>
-                <a href="blog.html">Blog</a>
+                <a href="blog.html" class="active">Blog</a>
                 <a href="contact.html">Contact Us</a>
             </nav>
             <div class="navbar-actions">
@@ -27,12 +28,18 @@
             </div>
         </header>
 
-        <!-- DYNAMIC BENTO GRID -->
-        <main id="dynamic-bento-grid" class="dynamic-bento-grid">
-            <!-- Cards will be injected here by script.js -->
+        <main class="blog-container">
+            <div class="blog-header">
+                <h1>Our Blog</h1>
+                <p>Latest thoughts, insights, and updates.</p>
+            </div>
+            <div id="blog-list-public" class="blog-grid">
+                <!-- Blog posts will be loaded here -->
+            </div>
         </main>
     </div>
 
     <script src="script.js"></script>
+    <script src="blog.js"></script>
 </body>
 </html>

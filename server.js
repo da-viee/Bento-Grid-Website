@@ -34,7 +34,7 @@ cloudinary.config({
 });
 
 // Multer setup
-const upload = multer({ dest: 'temp_uploads/' });
+const upload = multer({ dest: '/tmp' });
 
 // Mongoose Connection
 const MONGODB_URI = process.env.MONGODB_URI;

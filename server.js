@@ -24,6 +24,10 @@ app.use('/admin.html', basicAuth({
     unauthorizedResponse: 'Unauthorized Access. Please provide admin credentials.'
 }));
 
+app.get('/admin.html', (req, res) => {
+  res.sendFile(path.join(__dirname, 'admin.html'));
+});
+
 app.use(express.static(path.join(__dirname, '')));
 
 // Configure Cloudinary

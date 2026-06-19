@@ -1,8 +1,0 @@
-{
-  "name": "bento-grid-website",
-  "version": "1.0.0",
-  "description": "Static HTML/CSS Bento Grid Website",
-  "scripts": {
-    "build": "echo \"No build step required\""
-  }
-}

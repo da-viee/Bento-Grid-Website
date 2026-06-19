@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post - Dotted Pixel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="global.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Preloader -->
+<div id="preloader">
+    <div class="preloader__inner">
+        <div class="preloader__logo">dotted pixel</div>
+        <div class="preloader__dots">
+            <div class="preloader__dot"></div>
+            <div class="preloader__dot"></div>
+            <div class="preloader__dot"></div>
+            <div class="preloader__dot"></div>
+            <div class="preloader__dot"></div>
+        </div>
+    </div>
+</div>
+
+    <div class="main-container">
+        
+    <header class="navbar main-container">
+        <div class="logo">
+            <span class="pixel-font">dotted pixel</span>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="work.html">Our Work</a>
+            <a href="blog.html" class="active">Blog</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+        <div class="navbar-actions">
+            <div class="hamburger-menu">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+        
+        <main class="bento-grid" style="padding: 40px 0; margin-top: 40px;">
+            <div class="bento-item" style="grid-column: 1 / -1; background-color: #1E1E2C; color: #fff;">
+                <a href="blog.html" style="color: #D4FF00; text-decoration: none; display: inline-block; margin-bottom: 2rem; font-weight: 600; font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase;">← Back to Blog</a>
+                <h1 id="post-title" style="font-size: 3rem; margin-bottom: 0.5rem; font-weight: 800;">Loading...</h1>
+                <p id="post-date" style="opacity: 0.6; margin-bottom: 3rem;"></p>
+                
+                <div id="blog-post-content" style="max-width: 800px; margin: 0 auto; font-size: 1.1rem; line-height: 1.8; opacity: 0.9;">
+                    <!-- Content blocks injected here -->
+                </div>
+            </div>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="site-footer" style="margin-top: 60px;">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <span class="footer-logo">dotted pixel</span>
+                    <p>Animation, digital media, and creative services.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="work.html">Our Work</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="global.js"></script>
+    <script src="script.js"></script>
+    <script src="blog.js"></script>
+</body>
+</html>

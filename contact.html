@@ -1,88 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF--8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Your Animation Studio</title>
-    <link rel="stylesheet" href="style.css">   <!-- Your main stylesheet -->
-    <link rel="stylesheet" href="contact.css"> <!-- The new stylesheet for this page -->
+    <title>Contact Us | Dotted Pixel — Animation Studio</title>
+    <meta name="description" content="Start a project with Dotted Pixel. Get in touch for motion graphics, 3D renders, visual effects, and animation services.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="contact.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Re-use the main navbar for consistency -->
-    <header class="navbar main-container">
-        <div class="logo">
-            <img src="https://placehold.co/30x30/000000/FFFFFF?text=LOGO" alt="Logo">
-            <span>RUNCO</span> <!-- Or your company name -->
+
+<div id="preloader">
+    <div class="preloader__inner">
+        <div class="preloader__logo">dotted pixel</div>
+        <div class="preloader__dots">
+            <div class="preloader__dot"></div><div class="preloader__dot"></div>
+            <div class="preloader__dot"></div><div class="preloader__dot"></div>
+            <div class="preloader__dot"></div>
         </div>
+    </div>
+</div>
+
+    <header class="navbar main-container">
+        <div class="logo"><span class="pixel-font">dotted pixel</span></div>
         <nav class="nav-links">
             <a href="index.html">Home</a>
             <a href="work.html">Our Work</a>
-            <a href="contact.html" class="active">Contact Us</a> <!-- Set this link as active -->
+            <a href="blog.html">Blog</a>
+            <a href="contact.html" class="active">Contact Us</a>
         </nav>
         <div class="navbar-actions">
-            <button class="download-btn">Start a Project</button>
-            <div class="hamburger-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+            <div class="hamburger-menu"><span></span><span></span><span></span></div>
         </div>
     </header>
 
     <div class="contact-page-container">
-        <!-- Page Header -->
         <div class="contact-header">
-            <h1>Let's Create Together</h1>
-            <p>Have a project in mind or just want to say hi? We'd love to hear from you.</p>
+            <span class="contact-eyebrow">Let's Create Together</span>
+            <h1>Got a project<br>in mind?</h1>
+            <p>Tell us what you're working on and we'll get back to you within 24 hours.</p>
         </div>
 
-        <!-- Contact Bento Grid -->
         <main class="contact-grid">
-            <!-- Main Form Card (Large) -->
+            <!-- Main Form Card -->
             <div class="contact-card form-card">
                 <h2>Send us a Message</h2>
                 <form action="#">
                     <div class="form-group">
                         <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" required>
+                        <input type="text" id="name" name="name" placeholder="John Smith" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Your Email</label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" name="email" placeholder="john@example.com" required>
                     </div>
                     <div class="form-group">
-                        <label for="company">Company (Optional)</label>
-                        <input type="text" id="company" name="company">
+                        <label for="service">Service Needed</label>
+                        <select id="service" name="service">
+                            <option value="">Select a service...</option>
+                            <option>3D Render / Product Visualisation</option>
+                            <option>Motion Graphics</option>
+                            <option>Visual Effects</option>
+                            <option>Social Ad Campaign</option>
+                            <option>Illustration</option>
+                            <option>Other / Not Sure</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="message">Tell us about your project</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <textarea id="message" name="message" rows="5" placeholder="Describe your project, timeline, and budget..." required></textarea>
                     </div>
-                    <button type="submit" class="submit-btn">Send Message</button>
+                    <button type="submit" class="submit-btn">Send Message →</button>
                 </form>
             </div>
 
             <!-- Book a Call Card -->
             <div class="contact-card call-card">
-                <h3>Book a Free Discovery Call</h3>
-                <p>Want to discuss your project live? Pick a time on our calendar that works for you.</p>
-                <a href="#" class="call-to-action-btn">Schedule a 15-Min Call →</a>
+                <div class="call-card__icon">📞</div>
+                <h3>Book a Free<br>Discovery Call</h3>
+                <p>Want to discuss your project live? Pick a time that works for you and let's talk through the vision.</p>
+                <a href="#" class="call-to-action-btn">Schedule 15-Min Call →</a>
+            </div>
+
+            <!-- Services Card -->
+            <div class="contact-card services-card">
+                <h3>What we offer</h3>
+                <ul class="services-list">
+                    <li><span class="service-dot"></span>3D Renders & Modelling</li>
+                    <li><span class="service-dot"></span>Motion Graphics</li>
+                    <li><span class="service-dot"></span>Visual Effects</li>
+                    <li><span class="service-dot"></span>Illustration</li>
+                    <li><span class="service-dot"></span>Social Ad Production</li>
+                    <li><span class="service-dot"></span>IP Management</li>
+                </ul>
             </div>
 
             <!-- FAQ Card -->
             <div class="contact-card faq-card">
-                <h3>Frequently Asked Questions</h3>
-                <ul>
-                    <li>What is your typical pricing?</li>
-                    <li>What is the average project turnaround time?</li>
-                    <li>What do you need from me to get started?</li>
-                </ul>
+                <h3>Quick Answers</h3>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <strong>How long does a project take?</strong>
+                        <p>Typically 2–6 weeks depending on scope and complexity.</p>
+                    </div>
+                    <div class="faq-item">
+                        <strong>Do you work with international clients?</strong>
+                        <p>Yes — we work with clients worldwide, fully remote.</p>
+                    </div>
+                    <div class="faq-item">
+                        <strong>What do you need to get started?</strong>
+                        <p>A brief, reference images, and your brand assets if available.</p>
+                    </div>
+                </div>
             </div>
         </main>
     </div>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <span class="footer-logo">dotted pixel</span>
+            <p>Animation, digital media, and creative services. Motion graphics, 3D renders, visual effects, and interactive digital content.</p>
+            <div class="footer-socials">
+                <a href="#" title="Instagram">IG</a>
+                <a href="#" title="Twitter/X">X</a>
+                <a href="#" title="LinkedIn">LI</a>
+                <a href="#" title="Behance">BE</a>
+                <a href="#" title="YouTube">YT</a>
+            </div>
+        </div>
+        <div class="footer-col"><h4>Navigation</h4><ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="work.html">Our Work</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Services</h4><ul>
+            <li><a href="work.html">3D Renders</a></li>
+            <li><a href="work.html">Motion Graphics</a></li>
+            <li><a href="work.html">Visual Effects</a></li>
+            <li><a href="work.html">Social Ads</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Contact</h4><ul>
+            <li><a href="mailto:hello@dottedpixel.com">hello@dottedpixel.com</a></li>
+            <li><a href="contact.html">Start a Project</a></li>
+        </ul></div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 Dotted Pixel. All rights reserved.</p>
+        <a href="mailto:hello@dottedpixel.com">hello@dottedpixel.com</a>
+    </div>
+</footer>
+
+    <script src="global.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

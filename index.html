@@ -3,270 +3,308 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Product Animation Studio</title>
+    <title>Dotted Pixel | Motion Graphics & Animation Studio</title>
+    <meta name="description" content="Dotted Pixel is a premium animation and digital media studio specialising in motion graphics, 3D renders, visual effects, illustration, and interactive digital content.">
+    <meta property="og:title" content="Dotted Pixel | Motion Graphics & Animation Studio">
+    <meta property="og:description" content="Premium motion graphics, 3D renders, visual effects, and digital content for brands that demand the best.">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="global.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+
+<!-- Preloader -->
+<div id="preloader">
+    <div class="preloader__inner">
+        <div class="preloader__logo">dotted pixel</div>
+        <div class="preloader__dots">
+            <div class="preloader__dot"></div>
+            <div class="preloader__dot"></div>
+            <div class="preloader__dot"></div>
+            <div class="preloader__dot"></div>
+            <div class="preloader__dot"></div>
+        </div>
+    </div>
+</div>
+
     <div class="main-container">
         <header class="navbar main-container">
             <div class="logo">
-                <img src="https://placehold.co/30x30/000000/FFFFFF?text=LOGO" alt="Logo">
-                <span>RUNCO</span>
+                <span class="pixel-font">dotted pixel</span>
             </div>
             <nav class="nav-links">
                 <a href="index.html" class="active">Home</a>
                 <a href="work.html">Our Work</a>
+                <a href="blog.html">Blog</a>
                 <a href="contact.html">Contact Us</a>
             </nav>
             <div class="navbar-actions">
-                <button class="download-btn">Start a Project</button>
                 <div class="hamburger-menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <span></span><span></span><span></span>
                 </div>
             </div>
         </header>
 
+        <!-- SECTION 1: Hero -->
         <main class="bento-grid">
             <div class="bento-item hero">
                 <div class="hero-content">
                     <video autoplay muted loop playsinline>
                         <source src="assets/images/bag image2220001-0100.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
                     </video>
                 </div>
-                <a href="#" class="join-us-btn">
+                <a href="work.html" class="join-us-btn">
                     <span>VIEW OUR WORK</span>
                     <span class="arrow">→</span>
                 </a>
             </div>
-            <div class="bento-item running-skills">
-                <h3>Running skills</h3>
-                <div class="placeholder-box">
-                     <img src="https://placehold.co/200x150/6E6E6E/FFFFFF?text=GRAPH" alt="Graph placeholder">
+
+            <div class="bento-item running-skills" style="background-color:#1E1E2C; position:relative; overflow:hidden; padding:0;">
+                <img src="assets/images/6-300x300.png" alt="Motion Graphics" style="width:100%; height:100%; object-fit:cover; border-radius:20px;">
+                <div style="position:absolute; bottom:25px; left:25px; z-index:2;">
+                    <h4 style="color:#aaa; margin:0; font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:2px;">What We Do</h4>
+                    <h3 style="color:#fff; margin:5px 0 0; font-size:1.3rem;">Motion Graphics</h3>
                 </div>
             </div>
-            <div class="bento-item activities">
-                <h4>EXPLORE</h4>
-                <h3>Activities</h3>
-                <div class="placeholder-box">
-                    <img src="https://placehold.co/200x100/E8E8E8/333333?text=ACTIVITIES" alt="Activities placeholder">
+
+            <div class="bento-item activities" style="background-color:#2D2D30; position:relative; overflow:hidden; padding:0;">
+                <img src="assets/images/nivia.png" alt="Visual Effects" style="width:100%; height:100%; object-fit:cover; border-radius:20px;">
+                <div style="position:absolute; bottom:25px; left:25px; z-index:2;">
+                    <h4 style="color:#aaa; margin:0; font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:2px;">Speciality</h4>
+                    <h3 style="color:#fff; margin:5px 0 0; font-size:1.3rem;">Visual Effects</h3>
                 </div>
             </div>
-            <div class="bento-item download-app">
-                <div class="qr-code">
-                    <img src="https://placehold.co/100x100/FFFFFF/000000?text=QR" alt="QR Code">
+
+            <div class="bento-item download-app" style="background-color:#D4FF00; align-content:space-between;">
+                <div style="color:#000;">
+                    <h4 style="margin:0 0 10px; font-weight:700; font-size:0.7rem; text-transform:uppercase; letter-spacing:2px; opacity:0.6;">Our Studio</h4>
+                    <h3 style="margin:0; font-size:1.4rem; font-weight:800; color:#000; line-height:1.3;">Premium Digital<br>Media & Animation</h3>
                 </div>
-                <div class="app-info">
-                    <h4>DOWNLOAD OUR APP</h4>
-                    <p>Scan this QR code to get the app link on your phone.</p>
-                </div>
-                <div class="stats">
-                    <div class="stat-item">
-                        <span class="stat-number">100K</span>
-                        <span class="stat-label">DOWNLOADS</span>
+                <div class="stats" style="margin-top:0;">
+                    <div class="stat-item" style="color:#000;">
+                        <span class="stat-number" style="color:#000; font-size:1.8rem;">3D</span>
+                        <span class="stat-label" style="color:#000; opacity:0.7;">Renders</span>
                     </div>
-                    <div class="stat-item">
-                         <img src="https://placehold.co/60x25/BDBDBD/FFFFFF?text=AVATARS" class="avatars" alt="User avatars">
+                    <div class="stat-item" style="color:#000;">
+                        <span class="stat-number" style="color:#000; font-size:1.8rem;">2D</span>
+                        <span class="stat-label" style="color:#000; opacity:0.7;">Animation</span>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number">200</span>
-                        <span class="stat-label">REVIEWS</span>
+                    <div class="stat-item" style="color:#000;">
+                        <span class="stat-number" style="color:#000; font-size:1.8rem;">VFX</span>
+                        <span class="stat-label" style="color:#000; opacity:0.7;">Effects</span>
                     </div>
                 </div>
             </div>
         </main>
-       <!-- =================================== -->
-<!--      SECTION 2 (REVISED) START      -->
-<!-- =================================== -->
-<main class="bento-grid-2">
-    <!-- Tall left item: Outsourcing Company -->
-    <div class="bento-item-s2 item-outsourcing">
-        <div class="outsourcing-content">
-            <div class="outsourcing-header">
-                <span>OUTSOURCING COMPANY</span>
-            </div>
-            <div class="social-proof">
-                <span>Trusted by 1000's of sales reps</span>
-                <img src="https://placehold.co/80x25/ccc/000?text=LOGOS" alt="Company logos">
+
+        <!-- Marquee Strip -->
+        <div class="marquee-strip">
+            <div class="marquee-track">
+                <div class="marquee-item"><span class="dot"></span> Motion Graphics</div>
+                <div class="marquee-item"><span class="dot"></span> 3D Renders</div>
+                <div class="marquee-item"><span class="dot"></span> Visual Effects</div>
+                <div class="marquee-item"><span class="dot"></span> Illustration</div>
+                <div class="marquee-item"><span class="dot"></span> Digital Content</div>
+                <div class="marquee-item"><span class="dot"></span> Brand Animation</div>
+                <div class="marquee-item"><span class="dot"></span> Intellectual Property</div>
+                <div class="marquee-item"><span class="dot"></span> Social Ads</div>
+                <!-- Duplicate for seamless loop -->
+                <div class="marquee-item"><span class="dot"></span> Motion Graphics</div>
+                <div class="marquee-item"><span class="dot"></span> 3D Renders</div>
+                <div class="marquee-item"><span class="dot"></span> Visual Effects</div>
+                <div class="marquee-item"><span class="dot"></span> Illustration</div>
+                <div class="marquee-item"><span class="dot"></span> Digital Content</div>
+                <div class="marquee-item"><span class="dot"></span> Brand Animation</div>
+                <div class="marquee-item"><span class="dot"></span> Intellectual Property</div>
+                <div class="marquee-item"><span class="dot"></span> Social Ads</div>
             </div>
         </div>
+
+        <!-- SECTION 2: About & Services -->
+        <main class="bento-grid-2">
+            <div class="bento-item-s2 item-outsourcing">
+                <div class="outsourcing-content">
+                    <div class="outsourcing-header" style="text-align:left;">
+                        <span style="font-size:0.65rem; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,0.6);">WHO WE ARE</span>
+                    </div>
+                    <div class="social-proof" style="text-align:left;">
+                        <span style="font-size:1.8rem; font-weight:800; color:#fff; line-height:1.3;">Bringing Brands to Life Through Animation</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bento-item-s2 item-casestudy" style="padding:0; overflow:hidden; background:#1a1a1a;">
+                <img src="assets/images/Screenshot 2025-10-07 105202.png" alt="Featured animation work" style="width:100%; height:100%; object-fit:cover; border-radius:20px;">
+            </div>
+
+            <div class="bento-item-s2 item-we-handle" style="background-color:#D4FF00; color:#000;">
+                <div class="we-handle-header">
+                    <span style="font-size:0.65rem; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:rgba(0,0,0,0.5);">OUR MISSION</span>
+                </div>
+                <h2 style="color:#000; font-size:1.8rem;">We animate your brand so you <span class="wavy-underline" style="text-decoration-color:#000;">captivate your audience</span></h2>
+            </div>
+
+            <div class="bento-item-s2 item-stats">
+                <div class="stat-row">
+                    <div class="stat-text"><h3>3D</h3><p>High-end 3D product renders & modelling</p></div>
+                    <img src="assets/images/bagged-updated-300x300.png" alt="3D" style="width:55px; height:55px; object-fit:cover; border-radius:12px;">
+                </div>
+                <div class="stat-row">
+                    <div class="stat-text"><h3>2D</h3><p>Engaging 2D motion graphics & animation</p></div>
+                    <img src="assets/images/PIN1-300x300.png" alt="2D" style="width:55px; height:55px; object-fit:cover; border-radius:12px;">
+                </div>
+                <div class="stat-row">
+                    <div class="stat-text"><h3>VFX</h3><p>Visual effects for film, ads & digital media</p></div>
+                    <img src="assets/images/SALEM2-300x300.webp" alt="VFX" style="width:55px; height:55px; object-fit:cover; border-radius:12px;">
+                </div>
+            </div>
+
+            <div class="bento-item-s2 item-phone-app" style="padding:0; overflow:hidden;">
+                <img src="assets/images/syy0001.png" alt="Animation project" style="width:100%; height:100%; object-fit:cover;">
+            </div>
+
+            <div class="bento-item-s2 item-metrics">
+                <div class="metric-item">
+                    <img src="assets/images/6-300x300.png" alt="Motion Graphics" style="width:72px;height:72px;object-fit:cover;border-radius:16px;">
+                    <div class="metric-data"><span style="font-weight:600; font-size:0.85rem; color:#333;">Motion Graphics</span></div>
+                </div>
+                <div class="metric-item">
+                    <img src="assets/images/PIN1-300x300.png" alt="Illustration" style="width:72px;height:72px;object-fit:cover;border-radius:50%;">
+                    <div class="metric-data"><span style="font-weight:600; font-size:0.85rem; color:#333;">Illustration</span></div>
+                </div>
+                <div class="metric-item">
+                    <img src="assets/images/SALEM2-300x300.webp" alt="VFX" style="width:72px;height:72px;object-fit:cover;border-radius:50%;">
+                    <div class="metric-data"><span style="font-weight:600; font-size:0.85rem; color:#333;">Visual Effects</span></div>
+                </div>
+                <div class="metric-item">
+                    <img src="assets/images/bagged-updated-300x300.png" alt="Digital Content" style="width:72px;height:72px;object-fit:cover;border-radius:50%;">
+                    <div class="metric-data"><span style="font-weight:600; font-size:0.85rem; color:#333;">Digital Content</span></div>
+                </div>
+            </div>
+        </main>
+
+        <!-- SECTION 3: Work CTA + Blog -->
+        <main class="bento-grid-4">
+            <div class="bento-item-s4 item-offers">
+                <div class="offers-content">
+                    <h4 style="color:rgba(255,255,255,0.6); font-size:0.65rem; letter-spacing:2px; text-transform:uppercase; font-weight:600;">OUR CRAFT</h4>
+                    <h2 style="font-size:2rem; color:#fff; line-height:1.3;">Animation, Design &amp; Intellectual Property</h2>
+                </div>
+                <a href="work.html" class="all-products-btn">
+                    <div class="btn-text"><span>EXPLORE</span><p>All projects</p></div>
+                    <div class="cart-icon"><span>▶</span></div>
+                </a>
+            </div>
+
+            <div class="bento-item-s4 item-blog">
+                <div class="card-header">
+                    <span>DOTTED PIXEL JOURNAL</span>
+                    <a href="blog.html" class="arrow-icon" style="color:inherit;text-decoration:none;">↗</a>
+                </div>
+                <h3>Read our Blog</h3>
+                <img src="assets/images/Screenshot 2025-10-07 105526.png" alt="Blog preview" class="blog-image" style="border-radius:12px;">
+            </div>
+
+            <div class="bento-item-s4 item-bottom-right-container">
+                <div class="sub-item item-about-s4">
+                    <div class="card-header"><span>OUR STORY</span><span class="arrow-icon">↗</span></div>
+                    <h3>About Us</h3>
+                </div>
+                <a href="contact.html" class="sub-item item-contact-s4" style="text-decoration:none;">
+                    <div class="card-header"><span>START A PROJECT</span><span class="send-icon">➤</span></div>
+                    <h3>Contact Us</h3>
+                </a>
+            </div>
+        </main>
+
+        <!-- SECTION 4: Services Gallery -->
+        <main class="bento-grid-5">
+            <div class="bento-item-s5 item-designer" style="background-color:#1E1E2C; color:#fff;">
+                <h3 style="color:#fff; font-size:1.4rem;">Unleash Your Brand's Creative Potential</h3>
+                <p style="color:rgba(255,255,255,0.6); font-size:0.9rem; margin-top:10px;">Full-spectrum digital media production — from concept to final output.</p>
+                <img src="assets/images/snap4.png" alt="Creative production" style="border-radius:12px; margin-top:auto;">
+            </div>
+            <div class="bento-item-s5 item-motion" style="padding:0; overflow:hidden;">
+                <img src="assets/images/0001.png" alt="Motion graphics" style="width:100%;height:100%;object-fit:cover;border-radius:20px;margin:0;">
+            </div>
+            <div class="bento-item-s5 item-iconography" style="background-color:#2D2D30; color:#fff;">
+                <h4 style="color:rgba(255,255,255,0.5);">Illustration</h4>
+                <img src="assets/images/SALEM2-300x300.webp" alt="Illustration" style="border-radius:12px;margin-top:auto;">
+            </div>
+            <div class="bento-item-s5 item-tap-draw" style="padding:0;overflow:hidden;">
+                <img src="assets/images/game.png" alt="Interactive content" style="width:100%;height:100%;object-fit:cover;border-radius:20px;margin:0;">
+            </div>
+            <div class="bento-item-s5 item-linearity" style="padding:0;overflow:hidden;background:#000;">
+                <img src="assets/images/Screenshot 2025-10-07 105936.png" alt="VFX production" style="width:100%;height:100%;object-fit:cover;border-radius:20px;margin:0;">
+            </div>
+            <div class="bento-item-s5 item-app-icons" style="background-color:#D4FF00;color:#000;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;">
+                <h3 style="color:#000;font-size:2rem;margin:0;">IP</h3>
+                <p style="color:rgba(0,0,0,0.6);font-size:0.85rem;margin-top:5px;">Intellectual Property<br>Management</p>
+            </div>
+            <div class="bento-item-s5 item-ideas" style="padding:0;overflow:hidden;">
+                <img src="assets/images/Screenshot 2025-10-07 110003.png" alt="Creative ideas" style="width:100%;height:100%;object-fit:cover;border-radius:20px;margin:0;">
+            </div>
+            <div class="bento-item-s5 item-abstract-art" style="background-color:#2D2D30;color:#fff;display:flex;flex-direction:column;justify-content:space-between;">
+                <h4 style="color:rgba(255,255,255,0.5);font-size:0.65rem;letter-spacing:2px;text-transform:uppercase;">Animation</h4>
+                <h3 style="color:#fff;font-size:1.3rem;margin:0;">Production &amp; Marketing of Motion Graphics</h3>
+            </div>
+            <div class="bento-item-s5 item-posters" style="padding:0;overflow:hidden;">
+                <img src="assets/images/bagged-updated-300x300.png" alt="Branded content" style="width:100%;height:100%;object-fit:cover;border-radius:20px;margin:0;">
+            </div>
+        </main>
     </div>
 
-    <!-- Top middle item: Case Studies -->
-    <div class="bento-item-s2 item-casestudy">
-        <div class="casestudy-header">
-            <span class="c-logo">C</span>
-            <span class="stars">★★★★★</span>
-            <span class="reviews">42 reviews</span>
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <span class="footer-logo">dotted pixel</span>
+            <p>Animation, digital media, and creative services. We produce motion graphics, design, illustration, visual effects, and interactive digital content.</p>
+            <div class="footer-socials">
+                <a href="#" title="Instagram">IG</a>
+                <a href="#" title="Twitter/X">X</a>
+                <a href="#" title="LinkedIn">LI</a>
+                <a href="#" title="Behance">BE</a>
+                <a href="#" title="YouTube">YT</a>
+            </div>
         </div>
-        <img src="https://placehold.co/300x200/ddd/000?text=Case+Studies+UI" alt="Case studies UI on a laptop screen">
+        <div class="footer-col">
+            <h4>Navigation</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="work.html">Our Work</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Services</h4>
+            <ul>
+                <li><a href="work.html">3D Renders</a></li>
+                <li><a href="work.html">Motion Graphics</a></li>
+                <li><a href="work.html">Visual Effects</a></li>
+                <li><a href="work.html">Social Ads</a></li>
+                <li><a href="work.html">Illustration</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <ul>
+                <li><a href="mailto:hello@dottedpixel.com">hello@dottedpixel.com</a></li>
+                <li><a href="contact.html">Start a Project</a></li>
+                <li><a href="contact.html">Book a Call</a></li>
+            </ul>
+        </div>
     </div>
+    <div class="footer-bottom">
+        <p>© 2026 Dotted Pixel. All rights reserved.</p>
+        <a href="contact.html">hello@dottedpixel.com</a>
+    </div>
+</footer>
 
-    <!-- Top right item: We Handle Your Calls -->
-    <div class="bento-item-s2 item-we-handle">
-        <div class="we-handle-header">
-            <img src="https://placehold.co/100x50/ccc/000?text=Team" alt="Customer support team">
-            <span>CUSTOMER SUPPORT</span>
-        </div>
-        <h2>We handle your calls so you <span class="wavy-underline">run your business</span></h2>
-    </div>
-
-    <!-- Middle center item: Stats -->
-    <div class="bento-item-s2 item-stats">
-        <div class="stat-row">
-            <div class="stat-text">
-                <h3>>30.000</h3>
-                <p>We process >30.000 leads monthly</p>
-            </div>
-            <img src="https://placehold.co/60x60/ccc/000?text=ICON" alt="Abstract icon 1">
-        </div>
-        <div class="stat-row">
-            <div class="stat-text">
-                <h3>$180M</h3>
-                <p>More than $180 million brought to clients</p>
-            </div>
-            <img src="https://placehold.co/60x60/ccc/000?text=ICON" alt="Abstract icon 2">
-        </div>
-        <div class="stat-row">
-            <div class="stat-text">
-                <h3>200+</h3>
-            </div>
-            <img src="https://placehold.co/60x60/ccc/000?text=ICON" alt="Abstract icon 3">
-        </div>
-    </div>
-
-    <!-- Tall right item: Phone App -->
-    <div class="bento-item-s2 item-phone-app">
-        <img src="https://placehold.co/300x600/D6E9FF/000?text=App+Screenshot" alt="Mobile app interface in a hand">
-    </div>
-
-    <!-- Wide bottom item: Metrics -->
-    <div class="bento-item-s2 item-metrics">
-        <div class="metric-item">
-            <img src="https://placehold.co/100x100/ccc/000?text=Team" alt="Metrics image 1">
-        </div>
-        <div class="metric-item">
-            <img src="https://placehold.co/100x100/ddd/000?text=Agent" alt="Metrics image 2" class="circle">
-            <div class="metric-data">
-                <span>AHT (Average Handling Time)</span>
-                <p>97%</p>
-            </div>
-        </div>
-        <div class="metric-item">
-            <img src="https://placehold.co/100x100/ccc/000?text=Agent" alt="Metrics image 3" class="circle">
-        </div>
-        <div class="metric-item">
-             <img src="https://placehold.co/100x100/ddd/000?text=Agent" alt="Metrics image 4" class="circle">
-             <div class="metric-data">
-                <span>AHT (Average Handling Time)</span>
-                <p>97%</p>
-            </div>
-        </div>
-    </div>
-</main>
-<!-- =================================== -->
-<!--       SECTION 2 (REVISED) END       -->
-<!-- =================================== -->
- <!-- =================================== -->
-<!--           SECTION 4 START           -->
-<!-- =================================== -->
-<main class="bento-grid-4">
-    <!-- Tall Left Item: Offers -->
-    <div class="bento-item-s4 item-offers">
-        <div class="offers-content">
-            <h4>MORE OFFERS</h4>
-            <h2>There is something else for you</h2>
-        </div>
-        <img src="https://placehold.co/200x200/111/fff?text=Product" alt="Product image" class="offer-product-image">
-        <a href="#" class="all-products-btn">
-            <div class="btn-text">
-                <span>SHOP</span>
-                <p>All products</p>
-            </div>
-            <div class="cart-icon">
-                <span>&#128722;</span> <!-- Shopping Cart Icon -->
-            </div>
-        </a>
-    </div>
-
-    <!-- Top Right Item: Blog -->
-    <div class="bento-item-s4 item-blog">
-        <div class="card-header">
-            <span>WORLD OF HEARING TECHNOLOGY</span>
-            <span class="arrow-icon">↗</span>
-        </div>
-        <h3>View our blog</h3>
-        <img src="https://placehold.co/200x100/ccc/000?text=Abstract" alt="Abstract shapes" class="blog-image">
-    </div>
-
-    <!-- Bottom Right Container for two cards -->
-    <div class="bento-item-s4 item-bottom-right-container">
-        <!-- About Us Card -->
-        <div class="sub-item item-about-s4">
-            <div class="card-header">
-                <span>DISCOVER OUR HISTORY</span>
-                <span class="arrow-icon">↗</span>
-            </div>
-            <h3>About us</h3>
-        </div>
-        <!-- Contact Us Card -->
-        <div class="sub-item item-contact-s4">
-            <div class="card-header">
-                <span>HAVE SOME QUESTIONS?</span>
-                <span class="send-icon">➤</span>
-            </div>
-            <h3>Contact us</h3>
-        </div>
-    </div>
-</main>
-<!-- =================================== -->
-<!--            SECTION 4 END            -->
-<!-- =================================== -->
- <!-- =================================== -->
-<!--           SECTION 5 START           -->
-<!-- =================================== -->
-<main class="bento-grid-5">
-    <div class="bento-item-s5 item-designer">
-        <h3>Free The Designer Within</h3>
-        <p>Make the creative process yours.</p>
-        <img src="https://placehold.co/200x100/f0f0f0/000?text=Abstract+Lines" alt="Abstract design lines">
-    </div>
-    <div class="bento-item-s5 item-motion">
-        <img src="https://placehold.co/400x150/ffb366/000?text=Motion+UI" alt="Motion design UI">
-    </div>
-    <div class="bento-item-s5 item-iconography">
-        <h4>Iconography</h4>
-        <img src="https://placehold.co/200x150/f0f0f0/000?text=Tool+Icons" alt="Various tool icons">
-    </div>
-    <div class="bento-item-s5 item-tap-draw">
-         <img src="https://placehold.co/200x250/fff8b3/000?text=Designer+Setup" alt="Graphic designer workspace">
-    </div>
-    <div class="bento-item-s5 item-linearity">
-         <img src="https://placehold.co/400x250/ff8c33/000?text=Linearity+Logo" alt="Linearity company logo">
-    </div>
-    <div class="bento-item-s5 item-app-icons">
-         <img src="https://placehold.co/200x150/fdd5f7/000?text=App+Icons" alt="Two colorful app icons">
-    </div>
-    <div class="bento-item-s5 item-ideas">
-        <h4>Ideas</h4>
-        <img src="https://placehold.co/200x120/ffb366/000?text=Moodboard" alt="Moodboard with ideas">
-    </div>
-    <div class="bento-item-s5 item-abstract-art">
-        <img src="https://placehold.co/200x150/f5f3ed/000?text=Abstract+Art" alt="Abstract illustration of people">
-    </div>
-    <div class="bento-item-s5 item-posters">
-        <img src="https://placehold.co/200x150/d9d9d9/000?text=Posters" alt="Posters on a wall">
-    </div>
-</main>
-<!-- =================================== -->
-<!--            SECTION 5 END            -->
-<!-- =================================== -->
-    </div>
+    <script src="global.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

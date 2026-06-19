@@ -1,0 +1,21 @@
+[
+  {
+    "slug": "first-post",
+    "title": "Welcome to our new Animation Blog",
+    "date": "2026-06-15",
+    "blocks": [
+      {
+        "type": "text",
+        "content": "Welcome to the new blog for our animation and digital media services. Here we will be posting our latest updates, behind the scenes of our 3D renders, and motion graphics breakdowns."
+      },
+      {
+        "type": "image",
+        "content": "assets/images/nivia.png"
+      },
+      {
+        "type": "text",
+        "content": "We look forward to sharing more with you soon!"
+      }
+    ]
+  }
+]

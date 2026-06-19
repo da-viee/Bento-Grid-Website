@@ -3,90 +3,286 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Work - Your Animation Studio</title>
-    <link rel="stylesheet" href="style.css"> <!-- Your main stylesheet -->
-    <link rel="stylesheet" href="work.css">   <!-- The new stylesheet for this page -->
+    <title>Our Work | Dotted Pixel — Motion Graphics & Animation Studio</title>
+    <meta name="description" content="Browse Dotted Pixel's portfolio of motion graphics, 3D renders, visual effects, and social ad campaigns.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="work.css">
+    <link rel="stylesheet" href="global.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- You can reuse the main navbar from your homepage here -->
+
+<!-- Preloader -->
+<div id="preloader">
+    <div class="preloader__inner">
+        <div class="preloader__logo">dotted pixel</div>
+        <div class="preloader__dots">
+            <div class="preloader__dot"></div><div class="preloader__dot"></div>
+            <div class="preloader__dot"></div><div class="preloader__dot"></div>
+            <div class="preloader__dot"></div>
+        </div>
+    </div>
+</div>
     <header class="navbar main-container">
         <div class="logo">
-            <img src="https://placehold.co/30x30/000000/FFFFFF?text=LOGO" alt="Logo">
-            <span>RUNCO</span> <!-- Or your company name -->
+            <span class="pixel-font">dotted pixel</span>
         </div>
         <nav class="nav-links">
             <a href="index.html">Home</a>
-            <a href="work.html" class="active">Our Work</a> <!-- Set this link as active -->
+            <a href="work.html" class="active">Our Work</a>
+            <a href="blog.html">Blog</a>
             <a href="contact.html">Contact Us</a>
         </nav>
         <div class="navbar-actions">
-            <button class="download-btn">Start a Project</button>
             <div class="hamburger-menu">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </div>
         </div>
     </header>
 
     <div class="portfolio-container">
-        <!-- Page Header -->
+
         <div class="portfolio-header">
             <h1>Our Work</h1>
-            <p>A collection of our favorite product animations and motion graphics.</p>
+            <p>Motion graphics, 3D renders, visual effects & social campaigns.</p>
         </div>
 
-        <!-- Filter Bar -->
-        <nav class="filter-bar">
-            <button class="filter-btn active" onclick="showPopup('Recent projects filter is currently not available')">Recent</button>
-            <button class="filter-btn" onclick="showPopup('3D Renders filter is currently not available')">3D Renders</button>
-            <button class="filter-btn" onclick="showPopup('Motion Graphics filter is currently not available')">Motion Graphics</button>
-            <button class="filter-btn" onclick="showPopup('Social Ads filter is currently not available')">Social Ads</button>
+        <!-- ======= CATEGORY TABS ======= -->
+        <nav class="category-tabs">
+            <button class="tab-btn active" data-tab="recent">Recent</button>
+            <button class="tab-btn" data-tab="3d">3D Renders</button>
+            <button class="tab-btn" data-tab="motion">Motion Graphics</button>
+            <button class="tab-btn" data-tab="social">Social Ads</button>
         </nav>
 
-        <!-- Dynamic Project Grid (REVISED) -->
-        <main class="project-grid">
-            <!-- Each project is now specifically placed using an ID -->
-            <a href="project-a.html" class="project-card" id="project-a">
-                <div class="project-content"><span>Project A</span></div>
-            </a>
-            <a href="project-b.html" class="project-card" id="project-b">
-                <div class="project-content"><span>Project B</span></div>
-            </a>
-            <a href="project-c.html" class="project-card" id="project-c">
-                <div class="project-content"><span>Project C</span></div>
-            </a>
-            <a href="project-d.html" class="project-card" id="project-d">
-                <div class="project-content"><span>Project D</span></div>
-            </a>
-            <a href="project-e.html" class="project-card" id="project-e">
-                <div class="project-content"><span>Project E</span></div>
-            </a>
-            <a href="project-f.html" class="project-card" id="project-f">
-                <div class="project-content"><span>Project F</span></div>
-            </a>
-        </main>
+        <!-- ======= RECENT — Mixed bento grid ======= -->
+        <section class="tab-section active" id="tab-recent">
+            <div class="work-bento-grid">
+                <a href="project-a.html" class="work-card work-card--tall">
+                    <div class="work-card__bg" style="background-image:url('assets/images/bagged4-300x300.webp')"></div>
+                    <div class="work-card__overlay">
+                        <span class="work-card__tag">3D Render</span>
+                        <h3 class="work-card__title">Product Visualisation</h3>
+                        <span class="work-card__cta">View Project →</span>
+                    </div>
+                </a>
+                <a href="project-b.html" class="work-card work-card--wide">
+                    <div class="work-card__bg" style="background-image:url('assets/images/game.png')"></div>
+                    <div class="work-card__overlay">
+                        <span class="work-card__tag">Motion Graphics</span>
+                        <h3 class="work-card__title">Brand Animation</h3>
+                        <span class="work-card__cta">View Project →</span>
+                    </div>
+                </a>
+                <a href="project-c.html" class="work-card">
+                    <div class="work-card__bg" style="background-image:url('assets/images/0001.png')"></div>
+                    <div class="work-card__overlay">
+                        <span class="work-card__tag">Social Ads</span>
+                        <h3 class="work-card__title">Product Campaign</h3>
+                        <span class="work-card__cta">View Project →</span>
+                    </div>
+                </a>
+                <a href="project-d.html" class="work-card">
+                    <div class="work-card__bg" style="background-image:url('assets/images/untitled.png')"></div>
+                    <div class="work-card__overlay">
+                        <span class="work-card__tag">3D Render</span>
+                        <h3 class="work-card__title">Packaging Design</h3>
+                        <span class="work-card__cta">View Project →</span>
+                    </div>
+                </a>
+                <a href="project-e.html" class="work-card work-card--tall">
+                    <div class="work-card__bg" style="background-image:url('assets/images/nivia.png')"></div>
+                    <div class="work-card__overlay">
+                        <span class="work-card__tag">Motion Graphics</span>
+                        <h3 class="work-card__title">VFX Reel</h3>
+                        <span class="work-card__cta">View Project →</span>
+                    </div>
+                </a>
+                <a href="project-f.html" class="work-card work-card--wide">
+                    <div class="work-card__bg" style="background-image:url('assets/images/PIN1-300x300.png')"></div>
+                    <div class="work-card__overlay">
+                        <span class="work-card__tag">Social Ads</span>
+                        <h3 class="work-card__title">Digital Campaign</h3>
+                        <span class="work-card__cta">View Project →</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- ======= 3D RENDERS ======= -->
+        <section class="tab-section" id="tab-3d">
+            <div class="category-intro">
+                <h2>3D Renders</h2>
+                <p>High-fidelity product visualisations, packaging renders, and 3D modelling for brands that demand the best.</p>
+            </div>
+            <div class="projects-list">
+                <a href="project-a.html" class="project-row">
+                    <div class="project-row__thumb" style="background-image:url('assets/images/bagged4-300x300.webp')"></div>
+                    <div class="project-row__info">
+                        <span class="project-row__num">01</span>
+                        <div>
+                            <h3>Product Visualisation</h3>
+                            <p>Full 360° 3D product render for a product launch campaign. Includes clay render, lit render, and styleframe boards.</p>
+                            <div class="project-row__tags">
+                                <span>3D Modelling</span><span>Lighting</span><span>Product Render</span>
+                            </div>
+                        </div>
+                        <span class="project-row__arrow">→</span>
+                    </div>
+                </a>
+                <a href="project-d.html" class="project-row">
+                    <div class="project-row__thumb" style="background-image:url('assets/images/untitled.png')"></div>
+                    <div class="project-row__info">
+                        <span class="project-row__num">02</span>
+                        <div>
+                            <h3>Packaging Design Render</h3>
+                            <p>Photorealistic packaging render with environment setup, material studies and print-ready outputs.</p>
+                            <div class="project-row__tags">
+                                <span>Packaging</span><span>Photorealism</span><span>Blender</span>
+                            </div>
+                        </div>
+                        <span class="project-row__arrow">→</span>
+                    </div>
+                </a>
+                <a href="project-a.html" class="project-row project-row--coming-soon">
+                    <div class="project-row__thumb" style="background:#1E1E2C; display:flex; align-items:center; justify-content:center;">
+                        <span style="color:#444; font-size:2rem;">+</span>
+                    </div>
+                    <div class="project-row__info">
+                        <span class="project-row__num">03</span>
+                        <div>
+                            <h3>Architectural Visualisation</h3>
+                            <p>Coming soon — interior and exterior architectural renders.</p>
+                            <div class="project-row__tags">
+                                <span>Architecture</span><span>Interior</span><span>Coming Soon</span>
+                            </div>
+                        </div>
+                        <span class="project-row__arrow">→</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- ======= MOTION GRAPHICS ======= -->
+        <section class="tab-section" id="tab-motion">
+            <div class="category-intro">
+                <h2>Motion Graphics</h2>
+                <p>Dynamic 2D and 3D animations for brand identity, social media, broadcast, and digital campaigns.</p>
+            </div>
+            <div class="projects-list">
+                <a href="project-b.html" class="project-row">
+                    <div class="project-row__thumb" style="background-image:url('assets/images/game.png')"></div>
+                    <div class="project-row__info">
+                        <span class="project-row__num">01</span>
+                        <div>
+                            <h3>Brand Animation</h3>
+                            <p>Bespoke brand motion identity including logo reveal, transition graphics, and lower-thirds for a digital-first campaign.</p>
+                            <div class="project-row__tags">
+                                <span>Brand Identity</span><span>After Effects</span><span>Logo Reveal</span>
+                            </div>
+                        </div>
+                        <span class="project-row__arrow">→</span>
+                    </div>
+                </a>
+                <a href="project-e.html" class="project-row">
+                    <div class="project-row__thumb" style="background-image:url('assets/images/nivia.png')"></div>
+                    <div class="project-row__info">
+                        <span class="project-row__num">02</span>
+                        <div>
+                            <h3>Visual Effects Reel</h3>
+                            <p>Composited VFX sequences for a product ad — including particle systems, light leaks, and cinematic colour grading.</p>
+                            <div class="project-row__tags">
+                                <span>VFX</span><span>Compositing</span><span>Colour Grading</span>
+                            </div>
+                        </div>
+                        <span class="project-row__arrow">→</span>
+                    </div>
+                </a>
+                <a href="project-b.html" class="project-row project-row--coming-soon">
+                    <div class="project-row__thumb" style="background:#1E1E2C; display:flex; align-items:center; justify-content:center;">
+                        <span style="color:#444; font-size:2rem;">+</span>
+                    </div>
+                    <div class="project-row__info">
+                        <span class="project-row__num">03</span>
+                        <div>
+                            <h3>Explainer Animation</h3>
+                            <p>Coming soon — animated explainer for a tech product launch.</p>
+                            <div class="project-row__tags">
+                                <span>Explainer</span><span>2D Animation</span><span>Coming Soon</span>
+                            </div>
+                        </div>
+                        <span class="project-row__arrow">→</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- ======= SOCIAL ADS ======= -->
+        <section class="tab-section" id="tab-social">
+            <div class="category-intro">
+                <h2>Social Ads</h2>
+                <p>Scroll-stopping animated ads and digital content designed to convert — built for Instagram, TikTok, and YouTube.</p>
+            </div>
+            <div class="projects-list">
+                <a href="project-c.html" class="project-row">
+                    <div class="project-row__thumb" style="background-image:url('assets/images/0001.png')"></div>
+                    <div class="project-row__info">
+                        <span class="project-row__num">01</span>
+                        <div>
+                            <h3>Product Campaign</h3>
+                            <p>A full social ad campaign for a consumer product launch — 9:16 reels, 1:1 square posts, and animated story assets.</p>
+                            <div class="project-row__tags">
+                                <span>Instagram</span><span>Reels</span><span>Product Ad</span>
+                            </div>
+                        </div>
+                        <span class="project-row__arrow">→</span>
+                    </div>
+                </a>
+                <a href="project-f.html" class="project-row">
+                    <div class="project-row__thumb" style="background-image:url('assets/images/PIN1-300x300.png')"></div>
+                    <div class="project-row__info">
+                        <span class="project-row__num">02</span>
+                        <div>
+                            <h3>Digital Campaign</h3>
+                            <p>Multi-platform animated ad set across TikTok, YouTube pre-roll, and display banners for a lifestyle brand.</p>
+                            <div class="project-row__tags">
+                                <span>TikTok</span><span>YouTube</span><span>Display Ads</span>
+                            </div>
+                        </div>
+                        <span class="project-row__arrow">→</span>
+                    </div>
+                </a>
+                <a href="project-c.html" class="project-row project-row--coming-soon">
+                    <div class="project-row__thumb" style="background:#1E1E2C; display:flex; align-items:center; justify-content:center;">
+                        <span style="color:#444; font-size:2rem;">+</span>
+                    </div>
+                    <div class="project-row__info">
+                        <span class="project-row__num">03</span>
+                        <div>
+                            <h3>Branded Content Series</h3>
+                            <p>Coming soon — a 6-part animated branded content series.</p>
+                            <div class="project-row__tags">
+                                <span>Branded Content</span><span>Series</span><span>Coming Soon</span>
+                            </div>
+                        </div>
+                        <span class="project-row__arrow">→</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
     </div>
 
-    <!-- Popup for filter error messages -->
-    <div id="filter-popup" class="popup-overlay">
-        <div class="popup-content">
-            <span class="popup-close">&times;</span>
-            <h2>Storage Crashed</h2>
-            <p id="popup-message">Project currently not available.</p>
-            <p>Error 404: The requested filter is currently not available. Please try again later.</p>
-        </div>
-    </div>
-
-    <!-- Call to Action Footer -->
+    <!-- CTA Footer -->
     <section class="cta-footer">
         <h2>Like what you see?</h2>
         <p>Let's create something amazing for your brand.</p>
         <a href="contact.html" class="cta-button">Start a Project</a>
     </section>
+
+    <script src="global.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,148 +1,293 @@
-/* =================================== */
-/*    MASTER PROJECT DETAIL STYLES     */
-/* =================================== */
+/* ====================================== */
+/*      PROJECT DETAIL PAGE STYLES        */
+/* ====================================== */
 
-/* --- 1. General Styles for ALL Pages --- */
-body {
-    background-color: #212124;
+body.project-detail-page {
+    background-color: #0f0f0f;
     color: #fff;
-    font-family: 'Inter', sans-serif;
 }
 
-.main-container { max-width: 1600px; margin: 0 auto; }
-.navbar { /* Assuming styles from style.css */ }
-
-.project-page-wrapper {
-    padding: 20px;
-    box-sizing: border-box;
+.main-container {
+    max-width: 1300px;
     margin: 0 auto;
+    padding: 0 40px;
+    background: none;
+    border: none;
+    border-radius: 0;
 }
 
-.video-player {
+.nav-links a { color: rgba(255,255,255,0.5); }
+.nav-links a:hover, .nav-links a.active { color: #fff; }
+
+/* ---- Back link ---- */
+.detail-back {
+    padding: 20px 0;
+}
+.back-link {
+    color: rgba(255,255,255,0.4);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+.back-link:hover { color: #fff; }
+
+/* ====================================== */
+/*   HERO SECTION                         */
+/* ====================================== */
+
+.detail-hero {
+    margin-bottom: 60px;
+}
+
+.detail-hero__media {
     width: 100%;
-    aspect-ratio: 16 / 9;
-    background-color: #000;
-    border-radius: 20px;
+    height: 70vh;
+    min-height: 400px;
+    max-height: 700px;
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border-radius: 0;
 }
-.video-player img, .video-player video { width: 100%; height: 100%; object-fit: cover; }
-
-.testimonial {
-    background-color: #2D2D30;
-    border-radius: 20px;
-    padding: 50px;
-    text-align: center;
-    margin: 60px 0;
-}
-.testimonial blockquote { font-size: 28px; font-weight: 700; line-height: 1.4; margin: 0; }
-.testimonial cite { display: block; margin-top: 20px; font-style: normal; opacity: 0.7; }
-
-.project-nav {
-    display: flex;
-    justify-content: space-between;
-    border-top: 1px solid #444;
-    padding-top: 40px;
-    margin-top: 60px;
-}
-.nav-link { text-decoration: none; color: #fff; }
-.nav-link span { display: block; opacity: 0.7; font-size: 14px; }
-.nav-link h4 { margin: 5px 0 0 0; font-size: 20px; }
-.nav-link.next { text-align: right; }
-
-
-/* --- 2. Unique Layout for Project A (The Classic) --- */
-.project-a-page .project-page-wrapper { max-width: 1200px; }
-.project-a-page .project-hero { text-align: center; margin: 40px 0; }
-.project-a-page .project-hero h1 { font-size: 56px; margin: 0; }
-.project-a-page .project-hero h2 { font-size: 20px; font-weight: 500; opacity: 0.7; margin-top: 10px; }
-.project-a-page .video-player { margin-top: 40px; }
-.project-a-page .project-brief { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin: 60px 0; border-top: 1px solid #444; border-bottom: 1px solid #444; padding: 40px 0; }
-.project-a-page .brief-column h3 { font-size: 24px; }
-.project-a-page .brief-column p { line-height: 1.7; opacity: 0.8; }
-
-
-/* --- 3. Unique Layout for Project B (The Split-Screen Editorial) --- */
-.project-b-page .project-page-wrapper {
-    max-width: 1600px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: flex-start;
-}
-.project-b-page .project-hero { position: sticky; top: 20px; } /* Sticky video column */
-.project-b-page .project-hero h1 { font-size: 48px; }
-.project-b-page .project-content-column { grid-column: 2 / 3; }
-.project-b-page .brief-column { margin-bottom: 40px; }
-
-
-/* --- 4. Unique Layout for Project C (The Minimalist Focus) --- */
-.project-c-page .project-page-wrapper { max-width: 900px; text-align: center; }
-.project-c-page .project-hero h1 { font-size: 56px; }
-.project-c-page .project-brief { margin: 60px 0; text-align: left; }
-.project-c-page .breakdown-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 60px 0; }
-.project-c-page .breakdown-gallery img { width: 100%; border-radius: 20px; }
-
-
-/* --- 5. Unique Layout for Project D (The Bento Breakdown) --- */
-.project-d-page .project-page-wrapper { max-width: 1400px; }
-.project-d-page .project-hero { margin-bottom: 60px; }
-.project-d-page .project-hero h1 { font-size: 56px; text-align: center; margin-bottom: 20px; }
-.project-d-page .bento-breakdown { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.project-d-page .breakdown-card { background-color: #2D2D30; border-radius: 20px; padding: 25px; }
-.project-d-page .breakdown-card h4 { margin: 0 0 15px 0; }
-.project-d-page .breakdown-card img { width: 100%; border-radius: 10px; }
-.project-d-page .breakdown-card.brief-card { grid-column: 1 / 2; grid-row: 1 / 3; }
-.project-d-page .breakdown-card.img-card-1 { grid-column: 2 / 3; grid-row: 1 / 2; }
-.project-d-page .breakdown-card.img-card-2 { grid-column: 2 / 3; grid-row: 2 / 3; }
-.project-d-page .breakdown-card.img-card-3 { grid-column: 3 / 4; grid-row: 1 / 3; }
-
-
-/* --- 6. Unique Layout for Project E (The Immersive Hero) --- */
-.project-e-page .project-hero {
-    height: 100vh; /* Full viewport height */
+.detail-hero__media img,
+.detail-hero__media video {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.detail-hero__meta {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 60px;
+    align-items: start;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.detail-tag {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #D4FF00;
+    margin-bottom: 16px;
+    padding: 4px 12px;
+    border: 1px solid rgba(212,255,0,0.3);
+    border-radius: 20px;
+}
+
+.detail-meta-left h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    margin: 0 0 20px;
+    line-height: 1.1;
+}
+
+.detail-desc {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.55);
+    max-width: 540px;
+}
+
+.detail-meta-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.detail-spec {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.detail-spec__label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.3);
+}
+.detail-spec__value {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.8);
+}
+
+/* ====================================== */
+/*   BENTO CONTENT GRID                   */
+/* ====================================== */
+
+.detail-bento {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: auto;
+    gap: 16px;
+    margin-bottom: 80px;
+}
+
+.detail-card {
+    border-radius: 20px;
+    padding: 36px;
+    background: #1a1a1a;
+    border: 1px solid rgba(255,255,255,0.06);
+    grid-column: span 6;
+    overflow: hidden;
+}
+
+/* Wide = full row */
+.detail-card--wide { grid-column: span 12; }
+
+/* Text cards */
+.detail-card--text h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: rgba(255,255,255,0.35);
+    margin: 0 0 16px;
+}
+.detail-card--text p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.7);
+    margin: 0;
+}
+
+/* Image cards */
+.detail-card--image {
+    padding: 0;
     position: relative;
+}
+.detail-card__label {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(8px);
+    padding: 6px 12px;
+    border-radius: 20px;
+    z-index: 2;
+}
+.detail-card--image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    border-radius: 20px;
+}
+
+/* Video card */
+.detail-card--video {
+    padding: 24px;
+    background: #000;
+}
+.detail-card--video .detail-card__label {
+    position: relative;
+    top: auto;
+    left: auto;
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+/* Quote card */
+.detail-card--quote {
+    background: #D4FF00;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    padding: 40px;
-    box-sizing: border-box;
+    gap: 16px;
 }
-.project-e-page .hero-background-video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; filter: brightness(0.4); }
-.project-e-page .project-hero h1 { font-size: 8vw; text-align: center; }
-.project-e-page .project-hero h2 { opacity: 0.8; }
-.project-e-page .project-page-wrapper { max-width: 1200px; } /* Content below hero */
+.detail-card--quote blockquote {
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+    line-height: 1.4;
+}
+.detail-card--quote cite {
+    font-size: 0.9rem;
+    font-style: normal;
+    color: rgba(0,0,0,0.55);
+    font-weight: 500;
+}
 
+/* ====================================== */
+/*   PROJECT NAVIGATION                   */
+/* ====================================== */
 
-/* --- 7. Unique Layout for Project F (The Asymmetrical) --- */
-.project-f-page .project-page-wrapper { max-width: 1400px; }
-.project-f-page .project-grid { display: grid; grid-template-columns: 2fr 3fr; gap: 40px; align-items: center; margin: 60px 0; }
-.project-f-page .text-content h1 { font-size: 48px; }
-.project-f-page .text-content p { opacity: 0.8; line-height: 1.7; }
-.project-f-page .video-player { width: 100%; }
-.project-f-page .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 60px 0; }
-.project-f-page .gallery img { width: 100%; border-radius: 20px; }
+.detail-nav {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 20px;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 80px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+}
 
+.detail-nav__link {
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.2s ease;
+}
+.detail-nav__link:hover { opacity: 0.7; }
 
-/* --- 8. General Responsive Fallbacks --- */
+.detail-nav__link--prev {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.detail-nav__link--prev span { font-size: 0.8rem; color: rgba(255,255,255,0.35); }
+.detail-nav__link--prev strong { font-size: 1.1rem; font-weight: 700; }
+
+.detail-nav__link--all {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.4);
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+.detail-nav__link--all:hover { color: #fff; border-color: rgba(255,255,255,0.3); opacity: 1; }
+
+.detail-nav__link--next {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-end;
+}
+.detail-nav__link--next span { font-size: 0.8rem; color: rgba(255,255,255,0.35); }
+.detail-nav__link--next strong { font-size: 1.1rem; font-weight: 700; }
+
+/* ====================================== */
+/*   RESPONSIVE                           */
+/* ====================================== */
+
 @media (max-width: 1024px) {
-    /* Tablet */
-    .project-b-page .project-page-wrapper { grid-template-columns: 1fr; }
-    .project-b-page .project-hero { position: static; }
-    .project-f-page .project-grid { grid-template-columns: 1fr; }
+    .detail-hero__meta { grid-template-columns: 1fr; gap: 32px; }
+    .detail-bento { grid-template-columns: 1fr 1fr; }
+    .detail-card { grid-column: span 1; }
+    .detail-card--wide { grid-column: span 2; }
 }
 
 @media (max-width: 768px) {
-    /* Mobile: All layouts become single column */
-    .project-a-page .project-brief { grid-template-columns: 1fr; }
-    .project-c-page .breakdown-gallery { grid-template-columns: 1fr; }
-    .project-d-page .bento-breakdown { grid-template-columns: 1fr; }
-    .project-d-page .breakdown-card { grid-column: auto !important; grid-row: auto !important; }
-    .project-e-page .project-hero h1 { font-size: 12vw; }
-    .project-f-page .gallery { grid-template-columns: 1fr; }
-    .testimonial blockquote { font-size: 22px; }
+    .main-container { padding: 0 20px; }
+    .detail-hero__media { height: 50vw; min-height: 260px; }
+    .detail-bento { grid-template-columns: 1fr; }
+    .detail-card { grid-column: span 1; }
+    .detail-card--wide { grid-column: span 1; }
+    .detail-card--image img { height: 260px; }
+    .detail-nav { grid-template-columns: 1fr 1fr; }
+    .detail-nav__link--all { display: none; }
 }

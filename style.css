@@ -41,6 +41,19 @@ body, html {
 .logo img {
     margin-right: 12px;
     border-radius: 5px;
+    display: none; /* Hidden in favor of dotted pixel text */
+}
+
+.pixel-font {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 800;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    background: radial-gradient(circle, currentColor 20%, transparent 20%);
+    background-size: 4px 4px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
 }
 
 .navbar-actions {
@@ -101,8 +114,8 @@ body, html {
 .bento-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: minmax(100px, auto);
-    gap: 20px;
+    grid-template-rows: 420px 260px;
+    gap: 16px;
 }
 
 .bento-item {
@@ -110,18 +123,29 @@ body, html {
     padding: 25px;
     box-sizing: border-box;
     color: #fff;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.bento-item:hover, .bento-item-s2:hover, .bento-item-s4:hover, .bento-item-s5:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 1px 3px rgba(0,0,0,0.1);
+    z-index: 10;
 }
 
 /* Hero Section (Top Large Box) */
 .hero {
     grid-column: 1 / 4;
-    background-color: #E0E0E0;
+    grid-row: 1 / 2;
+    background-color: #1a1a1a;
     position: relative;
-    padding: 0; /* Remove padding to let image fill */
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 300px;
+    min-height: 420px;
+    border-radius: 20px;
+    overflow: hidden;
 }
 
 .hero-content {
@@ -345,6 +369,7 @@ body, html {
     color: #333;
     display: flex;
     flex-direction: column;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
 }
 
 /* --- Explicit Grid Item Placement --- */
@@ -583,6 +608,7 @@ body, html {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
 }
 
 /* Tall Left Item: Offers */
@@ -748,6 +774,7 @@ body, html {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
 }
 
 .bento-item-s5 img {

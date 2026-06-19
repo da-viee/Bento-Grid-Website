@@ -3,63 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project A - Tech Gadget Launch</title>
+    <title>Product Visualisation | Dotted Pixel</title>
+    <meta name="description" content="Full 360° 3D product visualisation project by Dotted Pixel — including storyboard, clay render, lit render, and styleframes.">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="project-a.css"> <!-- Styles for this page ONLY -->
+    <link rel="stylesheet" href="project-detail.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
 </head>
-<body class="project-a-page">
-    <!-- Navbar -->
+<body class="project-detail-page">
+
     <header class="navbar main-container">
-        <!-- ... [Same navbar code as before] ... -->
+        <div class="logo">
+            <span class="pixel-font">dotted pixel</span>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="work.html" class="active">Our Work</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+        <div class="navbar-actions">
+            <div class="hamburger-menu">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
     </header>
 
-    <main class="project-grid-container">
-        <!-- Card 1: Main Video (Wide) -->
-        <section class="bento-card hero-card">
-            <div class="video-player">
-                <img src="https://placehold.co/1200x675/f98e2d/fff?text=Project+A+Video" alt="Project A Video">
+    <!-- Back link -->
+    <div class="detail-back main-container">
+        <a href="work.html" class="back-link">← Back to Work</a>
+    </div>
+
+    <!-- Project Hero -->
+    <section class="detail-hero">
+        <div class="detail-hero__media">
+            <img src="assets/images/bagged4-300x300.webp" alt="Product Visualisation Hero">
+        </div>
+        <div class="detail-hero__meta main-container">
+            <div class="detail-meta-left">
+                <span class="detail-tag">3D Render</span>
+                <h1>Product Visualisation</h1>
+                <p class="detail-desc">A high-end 360° product render created for a consumer brand launch campaign — featuring clay renders, lit stills, and animated turntable.</p>
             </div>
-        </section>
+            <div class="detail-meta-right">
+                <div class="detail-spec">
+                    <span class="detail-spec__label">Client</span>
+                    <span class="detail-spec__value">Confidential</span>
+                </div>
+                <div class="detail-spec">
+                    <span class="detail-spec__label">Category</span>
+                    <span class="detail-spec__value">3D Render</span>
+                </div>
+                <div class="detail-spec">
+                    <span class="detail-spec__label">Tools</span>
+                    <span class="detail-spec__value">Blender, Cinema 4D, After Effects</span>
+                </div>
+                <div class="detail-spec">
+                    <span class="detail-spec__label">Deliverables</span>
+                    <span class="detail-spec__value">Still renders, Turntable video, Styleframes</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <!-- Card 2: The Brief -->
-        <section class="bento-card text-card">
+    <!-- Project Content Bento Grid -->
+    <main class="detail-bento main-container">
+
+        <!-- Brief -->
+        <section class="detail-card detail-card--text">
             <h3>The Brief</h3>
-            <p>Client A needed a powerful, sleek animation to launch their new flagship smart device, focusing on its premium materials and innovative features for a social media-first campaign.</p>
+            <p>The client needed a powerful, premium 3D product animation to anchor their new flagship launch. The goal was to communicate premium materials and innovative form through motion, while keeping the visual language clean and modern for a social media-first rollout.</p>
         </section>
 
-        <!-- Card 3: Our Approach -->
-        <section class="bento-card text-card">
+        <!-- Approach -->
+        <section class="detail-card detail-card--text">
             <h3>Our Approach</h3>
-            <p>We crafted a high-energy 3D animation that deconstructs the product, showcasing its internal components with dynamic camera movements and a modern, clean aesthetic.</p>
-        </section>
-        
-        <!-- Card 4: Behind the Scenes Image -->
-        <section class="bento-card image-card">
-            <h4>Styleframe</h4>
-            <img src="https://placehold.co/600x400/333/fff?text=Styleframe" alt="Styleframe">
+            <p>We built the full product in Blender, focusing on accurate material simulation — anisotropic metals, soft-touch plastics, and glass. The camera moves were choreographed to tell a story of reveal: starting with the clay form, then introducing light and texture, and finishing with a live-surface animated turntable.</p>
         </section>
 
-        <!-- Card 5: Behind the Scenes Image -->
-        <section class="bento-card image-card">
-            <h4>3D Clay Model</h4>
-            <img src="https://placehold.co/600x400/444/fff?text=Clay+Render" alt="Clay Render">
+        <!-- Storyboard / Styleframe -->
+        <section class="detail-card detail-card--image detail-card--wide">
+            <span class="detail-card__label">Styleframe</span>
+            <img src="assets/images/Screenshot 2025-10-07 105202.png" alt="Project Styleframe">
         </section>
 
-        <!-- Card 6: Testimonial (Wide) -->
-        <section class="bento-card testimonial-card">
-            <blockquote>"The final animation was beyond our expectations. It perfectly captured the energy of the product."</blockquote>
-            <cite>- Head of Marketing, Client A</cite>
+        <!-- Clay Render -->
+        <section class="detail-card detail-card--image">
+            <span class="detail-card__label">Clay Render</span>
+            <img src="assets/images/bagged-updated-300x300.png" alt="Clay Render">
         </section>
+
+        <!-- Lit Render -->
+        <section class="detail-card detail-card--image">
+            <span class="detail-card__label">Lit Render</span>
+            <img src="assets/images/0001.png" alt="Lit Render">
+        </section>
+
+        <!-- Final Output / Video placeholder -->
+        <section class="detail-card detail-card--video detail-card--wide">
+            <span class="detail-card__label">Final Output</span>
+            <video autoplay muted loop playsinline style="width:100%; border-radius:16px; display:block;">
+                <source src="assets/images/bag image2220001-0100.mp4" type="video/mp4">
+            </video>
+        </section>
+
+        <!-- Testimonial -->
+        <section class="detail-card detail-card--quote detail-card--wide">
+            <blockquote>"The final animation was beyond our expectations. It perfectly captured the energy and premium feel of the product. We saw a 3× engagement lift on launch day."</blockquote>
+            <cite>— Head of Marketing</cite>
+        </section>
+
     </main>
 
-    <footer class="main-container">
-        <nav class="project-nav">
-            <a href="project-f.html" class="nav-link prev"><span>← Prev</span><h4>Automotive Showcase</h4></a>
-            <a href="project-b.html" class="nav-link next"><span>Next →</span><h4>Cosmetics Commercial</h4></a>
-        </nav>
+    <!-- Project Navigation -->
+    <footer class="detail-nav main-container">
+        <a href="project-f.html" class="detail-nav__link detail-nav__link--prev">
+            <span>← Previous</span>
+            <strong>Digital Campaign</strong>
+        </a>
+        <a href="work.html" class="detail-nav__link detail-nav__link--all">
+            View All Work
+        </a>
+        <a href="project-b.html" class="detail-nav__link detail-nav__link--next">
+            <span>Next →</span>
+            <strong>Brand Animation</strong>
+        </a>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
